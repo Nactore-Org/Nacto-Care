@@ -14,10 +14,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(253, 39, 39);
   height: 16px;
+  @apply bg-green-500;
 }
 
-.app-header{
-  background-color: #C6DCFF;
+.app-header {
+  background-color: #c6dcff;
 }
