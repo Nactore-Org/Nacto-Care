@@ -2,7 +2,7 @@
 from sqlalchemy import Column, String, Date, TIMESTAMP
 from sqlalchemy_utils import UUIDType, ChoiceType
 from database import Base
-from uuid import UUID, uuid4
+from uuid import uuid4
 
 CITY = (
     ('MUMBAI', 'mumbai'),
