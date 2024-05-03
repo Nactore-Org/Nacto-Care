@@ -69,7 +69,7 @@ const BlogPage = () => {
     return (
         <>
             <h1 class="text-3xl font-bold mb-4 mt-10 text-center">Latest Blogs</h1>
-            <div class="container mx-auto px-4 py-8 w-[100vw]">
+            <div class="container mx-auto px-4 py-8 w-full">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-[80%] mx-auto">
                     {blogs.map((blog) => {
                         return <div class="bg-white shadow-md rounded-lg overflow-hidden">
