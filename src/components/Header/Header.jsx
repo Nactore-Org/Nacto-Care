@@ -56,6 +56,21 @@ function Header() {
                 Contact
               </NavLink>
             </li>
+
+            <li>
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  `cursor-pointer text-gray-800 ${
+                    isActive
+                      ? "text-black underline decoration-green-500 underline-offset-[0.5rem] decoration-2"
+                      : "text-gray-500"
+                  } transition-all hover:text-green-500`
+                }
+              >
+                About
+              </NavLink>
+            </li>
           </ul>
         </div>
         <div className="md:hidden">
