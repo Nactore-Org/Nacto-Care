@@ -44,6 +44,21 @@ function Header() {
 
             <li>
               <NavLink
+                to="/blog"
+                className={({ isActive }) =>
+                  `cursor-pointer text-gray-800 ${
+                    isActive
+                      ? "text-black underline decoration-green-500 underline-offset-[0.5rem] decoration-2"
+                      : "text-gray-500"
+                  } transition-all hover:text-green-500`
+                }
+              >
+                Blog
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink
                 to="/contact"
                 className={({ isActive }) =>
                   `cursor-pointer text-gray-800 ${
