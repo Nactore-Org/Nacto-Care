@@ -15,6 +15,7 @@ import LoginPage from "./Pages/LoginPage.jsx";
 import SignupPage from "./Pages/SignupPage.jsx";
 import AboutPage from "./Pages/AboutPage.jsx";
 import BlogPage from "./Pages/BlogPage.jsx";
+import Booking from "./Pages/Booking.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -26,6 +27,7 @@ const router = createBrowserRouter(
       <Route path="signup" element={<SignupPage />} />
       <Route path="about" element={<AboutPage />} />
       <Route path="blog" element={<BlogPage />} />
+      <Route path="/book-nurse" element={<Booking />} />
     </Route>
   )
 );
