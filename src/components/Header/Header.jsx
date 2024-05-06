@@ -7,10 +7,7 @@ function Header() {
       <div className="flex justify-between md:justify-evenly sticky top-0 z-[999] backdrop-blur-sm items-center py-[1.5rem] px-4 md:px-10 ">
         <div>
           <Link to="/">
-            <div className="flex items-center animate-pulse">
-              <img width={50} src="\assets\icon.png" alt="Logo" />
-              <h5 style={{fontFamily: "Just Another Hand", letterSpacing: '.12rem'}} className=" text-2xl font-semibold">Nacto-Care</h5>
-            </div>
+            <img width={70} src="\assets\icon.png" alt="Logo" />
           </Link>
         </div>
         <div>
