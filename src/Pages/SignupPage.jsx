@@ -109,6 +109,10 @@ function SignupPage() {
           </div>
         </div>
       </section>
+
+ <br/><br/>
+ <br/><br/>
+
     </>
   );
 }
