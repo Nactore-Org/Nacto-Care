@@ -41,22 +41,17 @@ function Footer() {
                 </h2>
                 <ul className="text-gray-500  font-medium">
                   <li className="mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="https://www.linkedin.com/company/nactore-organization/about/" className="hover:underline">
                       Linkedin
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="#" className="hover:underline">
-                      Twitter
+                    <a href="https://github.com/Nactore-Org/Nacto-Care" className="hover:underline">
+                     GitHub
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="#" className="hover:underline">
-                      Instagram
-                    </a>
-                  </li>
-                  <li className="mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="/contact" className="hover:underline">
                       Contact Us
                     </a>
                   </li>
