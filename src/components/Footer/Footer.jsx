@@ -46,17 +46,12 @@ function Footer() {
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="#" className="hover:underline">
-                      Twitter
-                    </a>
-                  </li>
-                  <li className="mb-4">
-                    <a href="#" className="hover:underline">
-                      Instagram
-                    </a>
-                  </li>
-                  <li className="mb-4">
                     <a href="https://github.com/Nactore-Org/Nacto-Care" className="hover:underline">
+                     GitHub
+                    </a>
+                  </li>
+                  <li className="mb-4">
+                    <a href="/src/pages/ContactPage.jsx" className="hover:underline">
                       Contact Us
                     </a>
                   </li>
