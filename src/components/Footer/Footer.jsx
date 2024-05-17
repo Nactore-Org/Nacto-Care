@@ -51,7 +51,7 @@ function Footer() {
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="/src/pages/ContactPage.jsx" className="hover:underline">
+                    <a href="/contact" className="hover:underline">
                       Contact Us
                     </a>
                   </li>
