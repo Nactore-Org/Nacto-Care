@@ -5,14 +5,14 @@ function Header() {
   return (
     <div className="app-header">
       <div className="flex justify-between md:justify-evenly sticky top-0 z-[999] backdrop-blur-sm items-center py-[1.5rem] px-4 md:px-10 ">
-        <div>
+        <div className="hover:scale-105 duration-100 ease-in-out">
           <Link to="/">
             <img width={70} src="\assets\icon.png" alt="Logo" />
           </Link>
         </div>
         <div>
           <ul className="hidden md:flex gap-8 font-medium">
-            <li>
+            <li className="hover:scale-110 duration-100 ease-in-out">
               <NavLink
                 to="/"
                 className={({ isActive }) =>
@@ -27,7 +27,7 @@ function Header() {
               </NavLink>
             </li>
 
-            <li>
+            <li className="hover:scale-110 duration-100 ease-in-out">
               <NavLink
                 to="/careers"
                 className={({ isActive }) =>
@@ -42,7 +42,7 @@ function Header() {
               </NavLink>
             </li>
 
-            <li>
+            <li className="hover:scale-110 duration-100 ease-in-out">
               <NavLink
                 to="/blog"
                 className={({ isActive }) =>
@@ -57,7 +57,7 @@ function Header() {
               </NavLink>
             </li>
 
-            <li>
+            <li className="hover:scale-110 duration-100 ease-in-out">
               <NavLink
                 to="/contact"
                 className={({ isActive }) =>
@@ -72,7 +72,7 @@ function Header() {
               </NavLink>
             </li>
 
-            <li>
+            <li className="hover:scale-110 duration-100 ease-in-out">
               <NavLink
                 to="/about"
                 className={({ isActive }) =>
