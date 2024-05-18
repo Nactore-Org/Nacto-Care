@@ -17,6 +17,9 @@ import AboutPage from "./Pages/AboutPage.jsx";
 import BlogPage from "./Pages/BlogPage.jsx";
 import Booking from "./Pages/Booking.jsx";
 import Blogs from "./Pages/Blogs.jsx";
+import PrivacyPolicy from "./Pages/PrivacyPolicy.jsx";
+import Licensing from "./Pages/Licensing.jsx";
+import TermsAndConditions from "./Pages/TermsAndConditions.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,6 +33,9 @@ const router = createBrowserRouter(
       <Route path="blog" element={<BlogPage />} />
       <Route path="blog/:slug" element={<Blogs />} />
       <Route path="/book-nurse" element={<Booking />} />
+      <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+      <Route path="/licensing" element={<Licensing />} />
+      <Route path="/termsandconditions" element={<TermsAndConditions />} />
     </Route>
   )
 );

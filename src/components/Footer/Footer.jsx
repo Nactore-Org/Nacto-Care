@@ -63,17 +63,17 @@ function Footer() {
                 </h2>
                 <ul className="text-gray-500  font-medium">
                   <li className="mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="/privacypolicy" className="hover:underline">
                       Privacy Policy
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="/licensing" className="hover:underline">
                       Licensing
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="/termsandconditions" className="hover:underline">
                       Terms &amp; Conditions
                     </a>
                   </li>
