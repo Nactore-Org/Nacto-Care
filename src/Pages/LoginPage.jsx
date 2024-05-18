@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import { IoEye, IoEyeOff } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 function LoginPage() {
+  const [passVis, setPassVis] = useState(false);
   return (
     <>
       <section class="bg-zinc-50 py-8 h-screen">
@@ -35,7 +37,7 @@ function LoginPage() {
                     required=""
                   />
                 </div>
-                <div>
+                <div className="relative">
                   <label
                     for="password"
                     class="block mb-2 text-sm font-medium text-gray-900"
@@ -43,13 +45,14 @@ function LoginPage() {
                     Password
                   </label>
                   <input
-                    type="password"
+                    type={passVis ? "text" : "password"}
                     name="password"
                     id="password"
                     placeholder="••••••••"
                     class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                     required=""
                   />
+                  <span onClick={() => setPassVis(!passVis)} className="bg-red absolute right-4 top-10 text-gray-400 hover:cursor-pointer">{ passVis? <IoEyeOff className="h-5 w-5" /> : <IoEye className="h-5 w-5" />}</span>
                 </div>
                 <div class="flex items-center justify-between">
                   <div class="flex items-start">
