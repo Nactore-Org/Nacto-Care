@@ -1,3 +1,5 @@
+# Nacto Care
+
 Welcome to Nacto Care! We are on a mission to address the critical shortage of nurses in India while simultaneously revolutionizing the way healthcare services are delivered. With a focus on empowering nurses and enhancing healthcare accessibility, Nacto Care strives to make a meaningful impact in the world's largest democracy.
 
 # Problem Statement
@@ -10,3 +12,62 @@ India currently faces a significant shortage of nurses, with only 2.06 nurses pe
 - Nacto Care facilitates immediate access to home nursing services for individuals in need, particularly the elderly. By leveraging technology, we connect patients with qualified nurses, ensuring timely and personalized care in the comfort of their homes.
 - Similar to how platforms like Zomato and Swiggy have transformed the gig economy, Nacto Care seeks to raise awareness about nursing as a rewarding career choice. Through outreach programs and educational initiatives, we aim to inspire more individuals to pursue nursing as a profession.
 - We prioritize the well-being and satisfaction of our patients by offering additional benefits such as a life insurance scheme. This incentivizes patients to choose Nacto Care for their healthcare needs, fostering trust and loyalty in our services.
+
+# Installation Steps
+
+- The Tech-Stack used in the project are:
+
+  React.js, FastAPI, PostgreSQL, Figma, JavaScript, Python.
+  
+  ![](https://skillicons.dev/icons?i=react,fastapi,postgresql,figma,javascript,python)
+
+  Install the required tools for development.
+  
+- STEPS:
+
+1. Clone the repository.
+   ```bash
+   git clone https://github.com/Nactore-Org/Nacto-Care
+   ```
+   You can also [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) the repository.
+   
+3. Install Dependencies
+   ```bash
+   npm install
+   ```
+   
+4. Start
+   ```bash
+   npm run dev
+   ```
+   
+5. Go to the backend server
+   ```bash
+   cd backend
+   ```
+   
+6. Install server dependencies
+   ```bash
+   npm install
+   ```
+   
+7. Start the server
+   ```bash
+   npm start
+   ```
+
+# Contributions
+
+- Contributions are to be made by following the guidelines to maintain an inclusive environment and make a meaningful impact.
+
+   Refer to [Code of Conduct](https://github.com/Nactore-Org/Nacto-Care/blob/main/CODE_OF_CONDUCT.md) for Contribution Guidelines.
+  
+
+1. Understand the project requirements.
+
+2. Create an [issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue) to report a bug, add features or describe enhancements to the project. You can also work on existing issues.
+
+3. Make the necessary developments and raise a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
+   
+  
+- Refer to [Contributing.md](https://github.com/Nactore-Org/Nacto-Care/blob/main/CONTRIBUTING.md) to get a detailed understanding regarding the steps to be followed for contributing to the project.
