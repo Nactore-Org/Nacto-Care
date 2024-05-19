@@ -116,21 +116,21 @@ function Header() {
         </div>
         <div className="md:hidden">
           {isNavBarOpen ? (
+            <FaXmark
+              id="hamburger"
+              alt="x-mark"
+              className="w-[30px] h-[30px] text-[#DC2626]"
+              onClick={() => {
+                setIsNavBarOpen(!isNavBarOpen);
+              }}
+            />
+          ) : (
             <img
               id="hamburger"
               width="30"
               height="30"
               src="https://img.icons8.com/ios-filled/50/dc2626/menu--v1.png"
               alt="menu--v1"
-              onClick={() => {
-                setIsNavBarOpen(!isNavBarOpen);
-              }}
-            />
-          ) : (
-            <FaXmark
-              id="hamburger"
-              alt="x-mark"
-              className="w-[30px] h-[30px] text-[#DC2626]"
               onClick={() => {
                 setIsNavBarOpen(!isNavBarOpen);
               }}
