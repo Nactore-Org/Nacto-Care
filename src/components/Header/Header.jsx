@@ -1,7 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import MenuOverlay from "./MenuOverlay";
+import { FaXmark } from "react-icons/fa6";
+const navLinks = [
+  {
+    title: "Home",
+    to: "/",
+  },
+  {
+    title: "Careers",
+    to: "/careers",
+  },
+  {
+    title: "Blog",
+    to: "/blog",
+  },
+  {
+    title: "Contact",
+    to: "/contact",
+  },
+  {
+    title: "About",
+    to: "/about",
+  },
+];
 
 function Header() {
+  const [isNavBarOpen, setIsNavBarOpen] = useState(false);
+
   return (
     <div className="app-header">
       <div className="flex justify-between md:justify-evenly sticky top-0 z-[999] backdrop-blur-sm items-center py-[1.5rem] px-4 md:px-10 ">
@@ -89,13 +115,27 @@ function Header() {
           </ul>
         </div>
         <div className="md:hidden">
-          <img
-            id="hamburger"
-            width="30"
-            height="30"
-            src="https://img.icons8.com/ios-filled/50/dc2626/menu--v1.png"
-            alt="menu--v1"
-          />
+          {isNavBarOpen ? (
+            <img
+              id="hamburger"
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios-filled/50/dc2626/menu--v1.png"
+              alt="menu--v1"
+              onClick={() => {
+                setIsNavBarOpen(!isNavBarOpen);
+              }}
+            />
+          ) : (
+            <FaXmark
+              id="hamburger"
+              alt="x-mark"
+              className="w-[30px] h-[30px] text-[#DC2626]"
+              onClick={() => {
+                setIsNavBarOpen(!isNavBarOpen);
+              }}
+            />
+          )}
         </div>
         <div className="hidden md:flex gap-6">
           <button className="bg-green-600 hover:scale-105 hover:shadow-lg hover:shadow-green-300 transition-all text-white px-[1.8rem] font-medium py-[0.5rem] rounded-sm shadow-lg shadow-green-200">
@@ -106,6 +146,9 @@ function Header() {
           </button>
         </div>
       </div>
+      {isNavBarOpen && (
+        <MenuOverlay links={navLinks} setIsNavBarOpen={setIsNavBarOpen} />
+      )}
     </div>
   );
 }
