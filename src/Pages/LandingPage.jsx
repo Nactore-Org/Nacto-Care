@@ -132,7 +132,7 @@ function LandingPage() {
                 <h2 className="font-bold text-center ml-auto mr-auto smd:ml-0 text-5xl my-4 smd:text-left max-w-[20ch]">
                   We value for health, healthcare workers and the nation
                 </h2>
-                <p className="w-full text-center smd:text-left max-w-[65ch] my-2 text-zinc-600">
+                <p className="w-full text-center smd:text-left max-w-[65ch] my-2 text-zinc-600 privacy">
                   We believe in valuing every aspect of health, from individual
                   wellness to the tireless dedication of those who nurture it.
                   Nurses in India are migrating to different nation to find
@@ -141,7 +141,7 @@ function LandingPage() {
                   a freelancing solution and connect the patients with certified
                   nurses.
                 </p>
-                <p className="w-full text-center smd:text-left max-w-[65ch] my-2 text-zinc-600">
+                <p className="w-full text-center smd:text-left max-w-[65ch] my-2 text-zinc-600 privacy">
                   For the care seekers, We provide them personalized healthcare
                   care plans and health insurances which will protect them in
                   case of emergency. Covering both the aspects of care seekers
@@ -161,10 +161,10 @@ function LandingPage() {
                   />
                 </div>
                 <div className="max-w-[70ch] mb-3">
-                  <h2 className="text-zinc-700 font-bold text-xl">
+                  <h2 className="text-zinc-700 font-bold text-xl contact-para">
                     Certified Professional Healthcare workers
                   </h2>
-                  <p className="max-w-[38ch] text-zinc-500 font-medium text-xm">
+                  <p className="max-w-[38ch] text-zinc-500 font-medium text-xm privacy">
                     We ensure quality care by connecting you with certified
                     healthcare professionals you can trust. Your well-being is
                     our priority.
@@ -176,10 +176,10 @@ function LandingPage() {
                   <img src="\assets\debt.png" height={100} width={100} alt="" />
                 </div>
                 <div className="max-w-[70ch] mb-3">
-                  <h2 className="text-zinc-700 font-bold text-xl">
+                  <h2 className="text-zinc-700 font-bold text-xl contact-para">
                     No Hidden Charges
                   </h2>
-                  <p className="max-w-[38ch] text-zinc-500 font-medium text-xm">
+                  <p className="max-w-[38ch] text-zinc-500 font-medium text-xm privacy">
                     Enjoy peace of mind with our no hidden charges policy. We
                     believe in transparent and honest pricing and what you see
                     will be the last amount that you'd ever pay.
@@ -191,10 +191,10 @@ function LandingPage() {
                   <img src="\assets\india.png" height={100} width={100} />
                 </div>
                 <div className="max-w-[70ch] mb-3">
-                  <h2 className="text-zinc-700 font-bold text-xl">
+                  <h2 className="text-zinc-700 font-bold text-xl contact-para">
                     Get Care, Anywhere
                   </h2>
-                  <p className="max-w-[38ch] text-zinc-500 font-medium text-xm">
+                  <p className="max-w-[38ch] text-zinc-500 font-medium text-xm privacy">
                     We are constantly expanding our service across cities in
                     India
                   </p>

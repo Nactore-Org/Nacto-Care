@@ -90,7 +90,7 @@ const Blogs = () => {
     }
 
     return (
-          <div className="w-full px-8 pt-10 pb-32 bg-white shadow-lg rounded-lg">
+          <div className="w-full px-8 pt-10 pb-32 bg-white shadow-lg rounded-lg blog">
             <div className="mb-8">
               <h2 className="text-3xl font-semibold mb-2">{blog.title}</h2>
               <p className="text-gray-600 text-sm">{`By ${blog.author} on ${blog.publication_date}`}</p>

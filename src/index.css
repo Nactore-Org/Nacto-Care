@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,4 +20,59 @@
 
 .app-header {
   background-color: #c6dcff;
+}
+
+body.light {
+  background-color: white;
+}
+
+body.dark {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark .app-header {
+  background-color: #333333;
+  color: white;
+}
+
+body.dark .footer {
+  background-color: #333333;
+  color: white;
+}
+
+body.dark .footer-heading {
+  color: white
+}
+
+body.dark .blog {
+  background-color: black;
+  color: white
+}
+
+body.dark .contact {
+  background-color: black;
+  color: white
+}
+
+body.dark .blog-text {
+  background-color: rgb(192, 192, 192);
+  color: white
+}
+
+body.dark .login , .signup {
+  background-color: #121212;
+  color: white
+}
+
+body.dark .contact-para {
+  color: white;
+}
+
+body.dark .privacy {
+  color: rgb(211, 211, 211);
+}
+
+.nav-link-active {
+  @apply underline decoration-green-500 underline-offset-2 decoration-2;
 }
