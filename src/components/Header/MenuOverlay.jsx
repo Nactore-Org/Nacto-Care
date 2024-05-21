@@ -14,7 +14,6 @@ const MenuOverlay = ({ links, setIsNavBarOpen }) => {
       {/* Mapping over the links array to create each link item */}
       {links.map((link, index) => (
         <li key={index}>
-          {" "}
           {/* Using index as the key for each list item */}
           <div className="flex flex-col">
             {/* NavLink component for navigation, applying active and hover styles */}
@@ -36,13 +35,19 @@ const MenuOverlay = ({ links, setIsNavBarOpen }) => {
       ))}
       {/* Login button */}
       <li>
-        <button className="bg-green-600 hover:scale-105 hover:shadow-lg hover:shadow-green-300 transition-all text-white px-[1.8rem] font-medium py-[0.5rem] rounded-sm shadow-lg shadow-green-200">
+        <button 
+          className="bg-green-600 hover:scale-105 hover:shadow-lg hover:shadow-green-300 transition-all text-white px-[1.8rem] font-medium py-[0.5rem] rounded-sm shadow-lg shadow-green-200"
+          onClick={handleClick} // Added onClick to close the menu
+        >
           <Link to="/login">Login</Link> {/* Link to the login page */}
         </button>
       </li>
       {/* Signup button */}
       <li>
-        <button className="bg-green-600 hover:scale-105 hover:shadow-lg hover:shadow-green-300 transition-all text-white px-[1.8rem] font-medium py-[0.5rem] rounded-sm shadow-lg shadow-green-200">
+        <button 
+          className="bg-green-600 hover:scale-105 hover:shadow-lg hover:shadow-green-300 transition-all text-white px-[1.8rem] font-medium py-[0.5rem] rounded-sm shadow-lg shadow-green-200"
+          onClick={handleClick} // Added onClick to close the menu
+        >
           <Link to="signup">Signup</Link> {/* Link to the signup page */}
         </button>
       </li>
