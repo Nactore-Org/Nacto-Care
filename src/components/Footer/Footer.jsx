@@ -14,12 +14,12 @@ function Footer() {
                 </h2>
                 <ul className="text-gray-500  font-medium">
                   <li className="mb-4">
-                    <a href="#" className=" hover:underline">
+                    <a href="/about" className=" hover:underline">
                       About
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="/careers" className="hover:underline">
                       Careers
                     </a>
                   </li>
@@ -29,7 +29,7 @@ function Footer() {
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="/blog" className="hover:underline">
                       Blog
                     </a>
                   </li>

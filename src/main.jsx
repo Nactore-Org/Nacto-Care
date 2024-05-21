@@ -33,9 +33,9 @@ const router = createBrowserRouter(
       <Route path="blog" element={<BlogPage />} />
       <Route path="blog/:slug" element={<Blogs />} />
       <Route path="/book-nurse" element={<Booking />} />
-      <Route path="/privacypolicy" element={<PrivacyPolicy />} />
-      <Route path="/licensing" element={<Licensing />} />
-      <Route path="/termsandconditions" element={<TermsAndConditions />} />
+      <Route path="privacypolicy" element={<PrivacyPolicy />} />
+      <Route path="licensing" element={<Licensing />} />
+      <Route path="termsandconditions" element={<TermsAndConditions />} />
     </Route>
   )
 );
