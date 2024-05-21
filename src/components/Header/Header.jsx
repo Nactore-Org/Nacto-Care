@@ -47,9 +47,6 @@ function Header() {
             <img width={70} src="\assets\icon.png" alt="Logo" />
           </Link>
         </div>
-        <div className="switch">
-          <Switch style={{ backgroundColor: themes === "dark" ? "#000000" : ""}} onChange={handleThemeChange} checked={themes === "dark"} checkedChildren="Dark Mode" unCheckedChildren="Light Mode" />
-        </div>
         <div>
           <ul className="hidden md:flex gap-8 font-medium">
             <li className="hover:scale-110 duration-100 ease-in-out">
@@ -169,6 +166,7 @@ function Header() {
             <Link to="signup">Signup</Link>
           </button>
         </div>
+        <Switch style={{ backgroundColor: themes === "dark" ? "#000000" : ""}} onChange={handleThemeChange} checked={themes === "dark"} checkedChildren="Dark Mode" unCheckedChildren="Light Mode" />
       </div>
       {isNavBarOpen && (
         <MenuOverlay links={navLinks} setIsNavBarOpen={setIsNavBarOpen} />
