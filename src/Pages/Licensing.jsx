@@ -10,7 +10,7 @@ const Licensing = () => {
     <div className="py-8 mb-5 w-[50vw] justify-start ml-auto mr-auto mt-10">
     <div>
       <BackBtn Page={"Licensing"} />
-      <LicenseWrapper>
+      <LicenseWrapper className='privacy'>
             <section>
               <p>Last updated: May 17, 2024</p>
               <p>

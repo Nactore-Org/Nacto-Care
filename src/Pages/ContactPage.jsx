@@ -10,12 +10,12 @@ function ContactPage() {
         </div>
       </div>
       <div>
-        <form className="bg-white">
+        <form className="bg-white contact">
           <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
             <h2 className="mb-4 text-4xl  font-extrabold text-center text-green-500">
               Contact Us
             </h2>
-            <p className="mb-8 lg:mb-16 font-light text-center text-gray-500">
+            <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 contact-para">
               Got a technical issue? Want to send feedback about a beta feature?
               Need details about our Business plan? Let us know.
             </p>
