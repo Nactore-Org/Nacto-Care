@@ -7,7 +7,7 @@ function SignupPage() {
   const [conVis, setConVis] = useState(false);
   return (
     <>
-      <section class="bg-zinc-50 py-8 h-screen">
+      <section class="bg-zinc-50 py-8 min-h-screen">
         <div class="flex flex-col items-center max-w-[28rem] justify-center px-6 py-8 mx-auto mt-7 lg:py-8">
           <a
             href="#"
