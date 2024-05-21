@@ -1,5 +1,5 @@
 from uuid import uuid4
-from jose import jwt, JWTError
+from jose import jwt,JWTError
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
 from passlib.context import CryptContext
 from models import Patient
@@ -77,10 +77,9 @@ async def get_current_patient(token: Annotated[str, Depends(oauth2_bearer)]):
     except JWTError:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,
                             detail='Could not validate user.')
+    
 
 # Route to create a patient
-
-
 @auth_router.post("/", status_code=status.HTTP_201_CREATED)
 async def create_user(db: db_dependency,
                       create_patient_request: CreatePatientRequest):
