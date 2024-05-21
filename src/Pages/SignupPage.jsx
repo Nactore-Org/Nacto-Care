@@ -7,14 +7,14 @@ function SignupPage() {
   const [conVis, setConVis] = useState(false);
   return (
     <>
-      <section class="bg-zinc-50 py-8 h-screen">
+      <section class="bg-zinc-50 py-8 h-screen signup">
         <div class="flex flex-col items-center max-w-[28rem] justify-center px-6 py-8 mx-auto mt-7 lg:py-8">
           <a
             href="#"
             class="flex items-center mb-6 text-2xl font-semibold text-gray-900"
           >
             <img class="w-8 h-8 mr-2" src="/assets/icon.png" alt="logo" />
-            Nacto Care
+            <div className="signup">Nacto Care</div>
           </a>
           <div class="w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0">
             <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
