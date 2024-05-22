@@ -65,6 +65,12 @@ body.dark .login , .signup {
   color: white
 }
 
+/* Add light mode styles for signup */
+body.light .signup {
+  background-color: white;
+  color: black;
+}
+
 body.dark .contact-para {
   color: white;
 }
