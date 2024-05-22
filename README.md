@@ -28,29 +28,38 @@ India currently faces a significant shortage of nurses, with only 2.06 nurses pe
    git clone https://github.com/Nactore-Org/Nacto-Care
    ```
    You can also [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) the repository.
+
+2. Go to the frontend directory. Install dependencies
+   ```bash
+   npm install
+   ```
+
+3. Start the development server
+   ```bash
+   npm run dev
+   ```
    
-   
-2. Go to the backend server
+4. Go to the backend server
    ```bash
    cd backend
    ```
    
-3. Create a virtual environment env within the backend folder
+5. Create a virtual environment env within the backend folder
    ```bash
    python -m venv env
    ```
    
-4. Activate the environment
+6. Activate the environment
    ```bash
    source env/bin/activate
    ```
    
-5. Install the dependencies
+7. Install the dependencies
    ```bash
    pip install -r requirements.txt
    ```
    
-6. Start the server
+8. Start the server
     ```bash
     python -m uvicorn main:app
     ```
