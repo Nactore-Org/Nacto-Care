@@ -43,10 +43,17 @@ const router = createBrowserRouter(
 export const ThemeContext = createContext(null);
 
 const App = () => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(() => {
+    const storedTheme = localStorage.getItem("theme");
+    return storedTheme || "light";
+  });
 
   const toggleTheme = () => {
-    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+    setTheme((curr) => {
+      const newTheme = curr === "light" ? "dark" : "light";
+      localStorage.setItem("theme", newTheme);
+      return newTheme;
+    });
   };
 
   useEffect(() => {
