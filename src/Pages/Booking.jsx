@@ -17,7 +17,7 @@ const Booking = () => {
             <div className="flex items-center mb-4">
                 <input
                     type="text"
-                    className="flex-1 border rounded-l-lg py-2 px-4"
+                    className="flex-1 border rounded-l-lg py-2 px-4 text-black-important"
                     placeholder="Search"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
