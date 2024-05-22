@@ -9,7 +9,7 @@ const TermsAndConditions = () => {
         <div className="py-8 mb-5 w-[50vw] justify-start ml-auto mr-auto mt-10">
     <div>
       <BackBtn Page={"Terms And Conditions"} />
-      <TermsWrapper>
+      <TermsWrapper className='privacy'>
       <section>
       <p>Last updated: May 17, 2024</p>
         <p>Welcome to NactoCare. These terms and conditions outline the rules and regulations for the use of NactoCare's website and services. By accessing this website, we assume you accept these terms and conditions. Do not continue to use NactoCare if you do not agree to all of the terms and conditions stated on this page.</p>

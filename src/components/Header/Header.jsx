@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import MenuOverlay from "./MenuOverlay";
 import { FaXmark } from "react-icons/fa6";
+import '../../index.css'
+import { ThemeContext } from "../../main";
+import {Switch} from "antd";
+
 const navLinks = [
   {
     title: "Home",
@@ -27,6 +31,13 @@ const navLinks = [
 
 function Header() {
   const [isNavBarOpen, setIsNavBarOpen] = useState(false);
+  const { theme, toggleTheme } = useContext(ThemeContext); 
+  const [themes, setThemes] = useState("light");
+
+  const handleThemeChange = () => {
+    toggleTheme(); 
+    setThemes((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
 
   return (
     <div className="app-header">
@@ -42,7 +53,9 @@ function Header() {
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  `cursor-pointer text-gray-800 ${
+                  `cursor-pointer ${
+                    theme === "dark" ? "text-white" : "text-gray-800"
+                  } ${
                     isActive
                       ? "text-black underline decoration-green-500 underline-offset-[0.5rem] decoration-2"
                       : "text-gray-500"
@@ -54,25 +67,29 @@ function Header() {
             </li>
 
             <li className="hover:scale-110 duration-100 ease-in-out">
-              <NavLink
-                to="/careers"
-                className={({ isActive }) =>
-                  `cursor-pointer text-gray-800 ${
-                    isActive
-                      ? "text-black underline decoration-green-500 underline-offset-[0.5rem] decoration-2"
-                      : "text-gray-500"
-                  } transition-all hover:text-green-500`
-                }
-              >
-                Careers
-              </NavLink>
-            </li>
+      <NavLink
+        to="/careers"
+        className={({ isActive }) =>
+          `cursor-pointer transition-all ${
+            theme === "dark" ? "text-white" : "text-gray-800"
+          } ${
+            isActive
+              ? `${theme === "dark" ? "text-white" : "text-black"} nav-link-active`
+              : "text-gray-500"
+          } hover:text-green-500`
+        }
+      >
+        Careers
+      </NavLink>
+    </li>
 
             <li className="hover:scale-110 duration-100 ease-in-out">
               <NavLink
                 to="/blog"
                 className={({ isActive }) =>
-                  `cursor-pointer text-gray-800 ${
+                  `cursor-pointer ${
+                    theme === "dark" ? "text-white" : "text-gray-800"
+                  } ${
                     isActive
                       ? "text-black underline decoration-green-500 underline-offset-[0.5rem] decoration-2"
                       : "text-gray-500"
@@ -87,7 +104,9 @@ function Header() {
               <NavLink
                 to="/contact"
                 className={({ isActive }) =>
-                  `cursor-pointer text-gray-800 ${
+                  `cursor-pointer ${
+                    theme === "dark" ? "text-white" : "text-gray-800"
+                  } ${
                     isActive
                       ? "text-black underline decoration-green-500 underline-offset-[0.5rem] decoration-2"
                       : "text-gray-500"
@@ -102,7 +121,9 @@ function Header() {
               <NavLink
                 to="/about"
                 className={({ isActive }) =>
-                  `cursor-pointer text-gray-800 ${
+                  `cursor-pointer ${
+                    theme === "dark" ? "text-white" : "text-gray-800"
+                  } ${
                     isActive
                       ? "text-black underline decoration-green-500 underline-offset-[0.5rem] decoration-2"
                       : "text-gray-500"
@@ -145,6 +166,7 @@ function Header() {
             <Link to="signup">Signup</Link>
           </button>
         </div>
+        <Switch style={{ backgroundColor: themes === "dark" ? "#000000" : ""}} onChange={handleThemeChange} checked={themes === "dark"} checkedChildren="Dark Mode" unCheckedChildren="Light Mode" />
       </div>
       {isNavBarOpen && (
         <MenuOverlay links={navLinks} setIsNavBarOpen={setIsNavBarOpen} />
