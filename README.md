@@ -13,17 +13,15 @@ India currently faces a significant shortage of nurses, with only 2.06 nurses pe
 - Similar to how platforms like Zomato and Swiggy have transformed the gig economy, Nacto Care seeks to raise awareness about nursing as a rewarding career choice. Through outreach programs and educational initiatives, we aim to inspire more individuals to pursue nursing as a profession.
 - We prioritize the well-being and satisfaction of our patients by offering additional benefits such as a life insurance scheme. This incentivizes patients to choose Nacto Care for their healthcare needs, fostering trust and loyalty in our services.
 
-# Installation Steps
+# Technologies Used
 
 - The Tech-Stack used in the project are:
 
   React.js, FastAPI, PostgreSQL, Figma, JavaScript, Python.
   
   ![](https://skillicons.dev/icons?i=react,fastapi,postgresql,figma,javascript,python)
-
-  Install the required tools for development.
   
-- STEPS:
+# Installation Steps
 
 1. Clone the repository.
    ```bash
@@ -31,30 +29,32 @@ India currently faces a significant shortage of nurses, with only 2.06 nurses pe
    ```
    You can also [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) the repository.
    
-3. Install Dependencies
-   ```bash
-   npm install
-   ```
    
-4. Start
-   ```bash
-   npm run dev
-   ```
-   
-5. Go to the backend server
+2. Go to the backend server
    ```bash
    cd backend
    ```
    
-6. Install server dependencies
+3. Create a virtual environment env within the backend folder
    ```bash
-   npm install
+   python -m venv env
    ```
    
-7. Start the server
+4. Activate the environment
    ```bash
-   npm start
+   source env/bin/activate
    ```
+   
+5. Install the dependencies
+   ```bash
+   pip install -r requirements.txt
+   ```
+   
+6. Start the server
+    ```bash
+    python -m uvicorn main:app
+    ```
+    
 
 # Contributions
 
