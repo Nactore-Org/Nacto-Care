@@ -31,3 +31,4 @@ yarn.lock
 __pycache__
 env
 .env
+venv/
