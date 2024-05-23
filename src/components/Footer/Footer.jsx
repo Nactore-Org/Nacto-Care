@@ -4,22 +4,22 @@ function Footer() {
   return (
     <>
       <div>
-        <footer className="bg-zinc-100 ">
+        <footer className="bg-zinc-100 footer">
           <div className="mx-auto w-full max-w-screen-xl">
             <h1 className="font-bold py-5 px-4 text-3xl">Nacto Care</h1>
             <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
               <div>
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase ">
+                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase footer-heading">
                   Company
                 </h2>
                 <ul className="text-gray-500  font-medium">
                   <li className="mb-4">
-                    <a href="#" className=" hover:underline">
+                    <a href="/about" className=" hover:underline">
                       About
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="/careers" className="hover:underline">
                       Careers
                     </a>
                   </li>
@@ -29,14 +29,14 @@ function Footer() {
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="/blog" className="hover:underline">
                       Blog
                     </a>
                   </li>
                 </ul>
               </div>
               <div>
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase ">
+                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase footer-heading">
                   Help center
                 </h2>
                 <ul className="text-gray-500  font-medium">
@@ -58,7 +58,7 @@ function Footer() {
                 </ul>
               </div>
               <div>
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase ">
+                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase footer-heading">
                   Legal
                 </h2>
                 <ul className="text-gray-500  font-medium">

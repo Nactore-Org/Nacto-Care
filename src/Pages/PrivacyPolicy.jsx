@@ -9,7 +9,7 @@ const PrivacyPolicy = () => {
     <div className="py-8 mb-5 w-[50vw] justify-start ml-auto mr-auto mt-10">
     <div>
       <BackBtn Page={"Privacy Policy"} />
-      <PolicyWrapper>
+      <PolicyWrapper className='privacy'>
             <section>
               <p>Last updated: May 17, 2024</p>
               <p>Welcome to NactoCare. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy or our practices with regards to your personal information, please contact us at nactoreorganization@gmail.com.</p>

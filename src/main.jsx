@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createContext, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import {
   createBrowserRouter,
@@ -33,15 +33,33 @@ const router = createBrowserRouter(
       <Route path="blog" element={<BlogPage />} />
       <Route path="blog/:slug" element={<Blogs />} />
       <Route path="/book-nurse" element={<Booking />} />
-      <Route path="/privacypolicy" element={<PrivacyPolicy />} />
-      <Route path="/licensing" element={<Licensing />} />
-      <Route path="/termsandconditions" element={<TermsAndConditions />} />
+      <Route path="privacypolicy" element={<PrivacyPolicy />} />
+      <Route path="licensing" element={<Licensing />} />
+      <Route path="termsandconditions" element={<TermsAndConditions />} />
     </Route>
   )
 );
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
-);
+export const ThemeContext = createContext(null);
+
+const App = () => {
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  };
+
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
+
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <React.StrictMode>
+        <RouterProvider router={router} />
+      </React.StrictMode>
+    </ThemeContext.Provider>
+  );
+};
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
