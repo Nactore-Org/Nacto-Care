@@ -7,6 +7,7 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import "./index.css";
+import Lenis from '@studio-freight/lenis'
 import Layout from "./components/Layout.jsx";
 import LandingPage from "./Pages/LandingPage.jsx";
 import CareersPage from "./Pages/CareersPage.jsx";
@@ -59,7 +60,15 @@ const App = () => {
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
-
+  
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }, []);
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <React.StrictMode>
