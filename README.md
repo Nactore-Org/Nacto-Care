@@ -29,7 +29,7 @@ India currently faces a significant shortage of nurses, with only 2.06 nurses pe
    ```
    You can also [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) the repository.
 
-2. Go to the frontend directory. Install dependencies
+2. From the root directory of the project, install dependencies
    ```bash
    npm install
    ```
