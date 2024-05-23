@@ -2,9 +2,8 @@ import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import MenuOverlay from "./MenuOverlay";
 import { FaXmark } from "react-icons/fa6";
-import '../../index.css'
+import '../../index.css';
 import { ThemeContext } from "../../main";
-import {Switch} from "antd";
 
 const navLinks = [
   {
@@ -31,11 +30,11 @@ const navLinks = [
 
 function Header() {
   const [isNavBarOpen, setIsNavBarOpen] = useState(false);
-  const { theme, toggleTheme } = useContext(ThemeContext); 
+  const { theme, toggleTheme } = useContext(ThemeContext);
   const [themes, setThemes] = useState("light");
 
   const handleThemeChange = () => {
-    toggleTheme(); 
+    toggleTheme();
     setThemes((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
@@ -47,92 +46,24 @@ function Header() {
             <img width={70} src="\assets\icon.png" alt="Logo" />
           </Link>
         </div>
-        <div>
-          <ul className="hidden md:flex gap-8 font-medium">
-            <li className="hover:scale-110 duration-100 ease-in-out">
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  `cursor-pointer ${
-                    theme === "dark" ? "text-white" : "text-gray-800"
-                  } ${
-                    isActive
+        <div className="md:mx-10 lg:mx-4">
+          <ul className="hidden md:flex md:gap-3 lg:gap-6 font-medium">
+            {navLinks.map((link, index) => (
+              <li key={index} className="hover:scale-110 duration-100 ease-in-out">
+                <NavLink
+                  to={link.to}
+                  className={({ isActive }) =>
+                    `cursor-pointer ${theme === "dark" ? "text-white" : "text-gray-800"
+                    } ${isActive
                       ? "text-black underline decoration-green-500 underline-offset-[0.5rem] decoration-2"
                       : "text-gray-500"
-                  } hover:text-green-500`
-                }
-              >
-                Home
-              </NavLink>
-            </li>
-
-            <li className="hover:scale-110 duration-100 ease-in-out">
-      <NavLink
-        to="/careers"
-        className={({ isActive }) =>
-          `cursor-pointer transition-all ${
-            theme === "dark" ? "text-white" : "text-gray-800"
-          } ${
-            isActive
-              ? `${theme === "dark" ? "text-white" : "text-black"} nav-link-active`
-              : "text-gray-500"
-          } hover:text-green-500`
-        }
-      >
-        Careers
-      </NavLink>
-    </li>
-
-            <li className="hover:scale-110 duration-100 ease-in-out">
-              <NavLink
-                to="/blog"
-                className={({ isActive }) =>
-                  `cursor-pointer ${
-                    theme === "dark" ? "text-white" : "text-gray-800"
-                  } ${
-                    isActive
-                      ? "text-black underline decoration-green-500 underline-offset-[0.5rem] decoration-2"
-                      : "text-gray-500"
-                  } transition-all hover:text-green-500`
-                }
-              >
-                Blog
-              </NavLink>
-            </li>
-
-            <li className="hover:scale-110 duration-100 ease-in-out">
-              <NavLink
-                to="/contact"
-                className={({ isActive }) =>
-                  `cursor-pointer ${
-                    theme === "dark" ? "text-white" : "text-gray-800"
-                  } ${
-                    isActive
-                      ? "text-black underline decoration-green-500 underline-offset-[0.5rem] decoration-2"
-                      : "text-gray-500"
-                  } transition-all hover:text-green-500`
-                }
-              >
-                Contact
-              </NavLink>
-            </li>
-
-            <li className="hover:scale-110 duration-100 ease-in-out">
-              <NavLink
-                to="/about"
-                className={({ isActive }) =>
-                  `cursor-pointer ${
-                    theme === "dark" ? "text-white" : "text-gray-800"
-                  } ${
-                    isActive
-                      ? "text-black underline decoration-green-500 underline-offset-[0.5rem] decoration-2"
-                      : "text-gray-500"
-                  } transition-all hover:text-green-500`
-                }
-              >
-                About
-              </NavLink>
-            </li>
+                    } hover:text-green-500`
+                  }
+                >
+                  {link.title}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="md:hidden">
@@ -158,15 +89,18 @@ function Header() {
             />
           )}
         </div>
-        <div className="hidden md:flex gap-6">
-          <button className="bg-green-600 hover:scale-105 hover:shadow-lg hover:shadow-green-300 transition-all text-white px-[1.8rem] font-medium py-[0.5rem] rounded-sm shadow-lg shadow-green-200">
+        <div className="hidden md:flex gap-4 mx-4">
+          <button className="bg-green-600 hover:scale-105 hover:shadow-lg hover:shadow-green-300 transition-all text-white px-[1.5rem] font-medium py-[0.5rem] rounded-sm shadow-lg shadow-green-200">
             <Link to="/login">Login</Link>
           </button>
-          <button className="bg-green-600 hover:scale-105 hover:shadow-lg hover:shadow-green-300 transition-all text-white px-[1.8rem] font-medium py-[0.5rem] rounded-sm shadow-lg shadow-green-200">
+          <button className="bg-green-600 hover:scale-105 hover:shadow-lg hover:shadow-green-300 transition-all text-white px-[1.5rem] font-medium py-[0.5rem] rounded-sm shadow-lg shadow-green-200">
             <Link to="signup">Signup</Link>
           </button>
         </div>
-        <Switch style={{ backgroundColor: themes === "dark" ? "#000000" : ""}} onChange={handleThemeChange} checked={themes === "dark"} checkedChildren="Dark Mode" unCheckedChildren="Light Mode" />
+        <div
+          className={`toggle-button ${themes === "dark" ? "dark" : ""}`}
+          onClick={handleThemeChange}
+        ></div>
       </div>
       {isNavBarOpen && (
         <MenuOverlay links={navLinks} setIsNavBarOpen={setIsNavBarOpen} />
