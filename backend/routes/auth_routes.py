@@ -1,15 +1,32 @@
 from uuid import uuid4
 from jose import jwt,JWTError
-from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
+from fastapi import Form
+from fastapi.security import OAuth2PasswordBearer
 from passlib.context import CryptContext
 from models import Patient
 from database import SessionLocal
 from starlette import status
 from sqlalchemy.orm import Session
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from fastapi import APIRouter, Depends, HTTPException
 from typing import Annotated
-from datetime import timedelta, datetime
+from datetime import timedelta, datetime,date
+from enum import Enum
+
+
+class CityChoice(str,Enum):
+    DELHI = 'DELHI'
+    MUMBAI = 'MUMBAI'
+    AHEMBDABAD = 'AHEMBDABAD'
+    BANGLORE = 'BANGLORE'
+    CHENNAI = 'CHENNAI'
+
+
+#Custom Request Form in Authentication
+class OAuth2EmailRequestForm:
+    def __init__(self,email:str=Form(...),password:str=Form(...)):
+        self.email=email
+        self.password=password
 
 # API Router
 auth_router = APIRouter(prefix="/auth", tags=['Authentication'])
@@ -25,8 +42,13 @@ oauth2_bearer = OAuth2PasswordBearer(tokenUrl='auth/token')
 
 # Models for validation
 class CreatePatientRequest(BaseModel):
+    patient_name:str
     patient_email: str
     patient_password: str
+    patient_dob:date
+    patient_phone_number:str
+    patient_address:str
+    patient_city:CityChoice = Field(default=CityChoice.DELHI)
 
 
 class Token(BaseModel):
@@ -80,17 +102,22 @@ async def get_current_patient(token: Annotated[str, Depends(oauth2_bearer)]):
     
 
 # Route to create a patient
-@auth_router.post("/", status_code=status.HTTP_201_CREATED)
+@auth_router.post("/signup", status_code=status.HTTP_201_CREATED)
 async def create_user(db: db_dependency,
                       create_patient_request: CreatePatientRequest):
     patient_id = str(uuid4())
     current_time = datetime.utcnow()
     create_user_model = Patient(
+        patient_name = create_patient_request.patient_name,
         patient_email=create_patient_request.patient_email,
         patient_password=bcrypt_context.hash(
             create_patient_request.patient_password),
         patient_id=patient_id,
-        patient_created_at=current_time
+        patient_created_at=current_time,
+        patient_dob = create_patient_request.patient_dob,
+        patient_phone_number = create_patient_request.patient_phone_number,
+        patient_address = create_patient_request.patient_address,
+        patient_city = create_patient_request.patient_city.value
     )
 
     db.add(create_user_model)
@@ -98,10 +125,10 @@ async def create_user(db: db_dependency,
 
 
 # Route to create access token for a patient
-@auth_router.post("/token", response_model=Token)
-async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm, Depends()],
+@auth_router.post("/login", response_model=Token)
+async def login_for_access_token(form_data: Annotated[OAuth2EmailRequestForm, Depends()],
                                  db: db_dependency):
-    user = authenticate_patient(form_data.username, form_data.password, db)
+    user = authenticate_patient(form_data.email, form_data.password, db)
     if not user:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,
                             detail='Could not validate user.')
