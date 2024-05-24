@@ -69,6 +69,18 @@ body.dark .contact-para {
   color: white;
 }
 
+body.dark p, li {
+  color: white;
+}
+
+body.dark .guideline-subheading {
+  color: #d3d3d3;
+}
+
+body.light li {
+  color: #333;
+}
+
 body.dark .privacy {
   color: rgb(211, 211, 211);
 }
