@@ -6,20 +6,20 @@ function Footer() {
       <div>
         <footer className="bg-zinc-100 footer">
           <div className="mx-auto w-full max-w-screen-xl">
-            <h1 className="font-bold py-5 px-4 text-3xl">Nacto Care</h1>
-            <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+            <h1 className="font-bold py-5 px-4 md:px-10 lg:px-20 text-3xl">Nacto Care</h1>
+            <div className="grid grid-cols-2 gap-8 px-4 md:px-10 lg:px-20 py-6 lg:py-8 md:grid-cols-4">
               <div>
                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase footer-heading">
                   Company
                 </h2>
                 <ul className="text-gray-500  font-medium">
                   <li className="mb-4">
-                    <a href="#" className=" hover:underline">
+                    <a href="/about" className=" hover:underline">
                       About
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="/careers" className="hover:underline">
                       Careers
                     </a>
                   </li>
@@ -29,7 +29,7 @@ function Footer() {
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="/blog" className="hover:underline">
                       Blog
                     </a>
                   </li>
@@ -47,7 +47,7 @@ function Footer() {
                   </li>
                   <li className="mb-4">
                     <a href="https://github.com/Nactore-Org/Nacto-Care" className="hover:underline">
-                     GitHub
+                      GitHub
                     </a>
                   </li>
                   <li className="mb-4">
@@ -85,8 +85,8 @@ function Footer() {
                 </ul>
               </div>
             </div>
-            <div className="px-4  flex items-center justify-center">
-            © 2024 Nactore Organization, Building for democracy with care
+            <div className="px-4 py-4 flex items-center justify-center">
+              © 2024 Nactore Organization, Building for democracy with care
             </div>
           </div>
         </footer>

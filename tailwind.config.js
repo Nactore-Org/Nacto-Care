@@ -14,10 +14,24 @@ export default {
       xl: "1280px",
       "2xl": "1536px",
     },
-    extend: {},
+    extend: {
+      utilities: {
+        '.text-black-important': {
+          color: 'black !important',
+        },
+      },
+    },
     fontFamily: {
       body: ["Poppins"],
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.text-black-important': {
+          color: 'black !important',
+        },
+      });
+    },
+  ],
 };
