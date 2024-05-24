@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function BackBtn({ Page }) {
   return (
     <>
-      <div>
+      <div className="text-center lg:text-left">
         <span>
           <Link to="/" className="font-bold">
             Home /{" "}
