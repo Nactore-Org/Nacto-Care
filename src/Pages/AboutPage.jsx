@@ -8,6 +8,7 @@ import anytimehover from '../../public/assets/anytimehover.png'
 import career from '../../public/assets/nursecareer.png'
 import careerhover from '../../public/assets/nursecareerhover.png'
 import BackBtn from "../components/BackBtn/BackBtn";
+import ourstory from '../../public/assets/ourstory.jpg'
 import "../styles/AboutPage.css"
 
 const AboutPage = () => {
@@ -48,10 +49,7 @@ const AboutPage = () => {
           </h5>
           <div className="flex justify-center flex-wrap-reverse gap-4 text-center sm:px-28">
             <div className="">
-              {/* <img src="/assets/mission.svg" width={250} height={250} /> */}
-              <video width="400" height="400" controls>
-                <source src="./Videos/video1.mp4" type="video/mp4" />
-              </video>
+              <img src={ourstory} width={400} height={400} />
             </div>
             <div className="flex flex-col justify-center items-center">
               <p className="text-left w-full max-w-96 text-base">
