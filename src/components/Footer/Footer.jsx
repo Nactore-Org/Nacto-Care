@@ -24,7 +24,7 @@ function Footer() {
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="/ourbrand" className="hover:underline">
                       Brand Center
                     </a>
                   </li>
