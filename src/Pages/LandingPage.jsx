@@ -80,7 +80,7 @@ function LandingPage() {
             {/* Contact Support */}
             <div className="flex flex-col items-center mt-14 lg:mt-0">
               <img
-                src="/assets/customer-support.png"
+                src="/assets/customer.png"
                 width={130}
                 height={130}
                 className="block"
