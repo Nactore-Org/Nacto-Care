@@ -21,6 +21,7 @@ import Blogs from "./Pages/Blogs.jsx";
 import PrivacyPolicy from "./Pages/PrivacyPolicy.jsx";
 import Licensing from "./Pages/Licensing.jsx";
 import TermsAndConditions from "./Pages/TermsAndConditions.jsx";
+import BrandCenter from "./Pages/BrandCenter.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,6 +29,7 @@ const router = createBrowserRouter(
       <Route path="" element={<LandingPage />} />
       <Route path="careers" element={<CareersPage />} />
       <Route path="contact" element={<ContactPage />} />
+      <Route path="ourbrand" element={<BrandCenter />} />
       <Route path="login" element={<LoginPage />} />
       <Route path="signup" element={<SignupPage />} />
       <Route path="about" element={<AboutPage />} />
@@ -60,7 +62,7 @@ const App = () => {
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
-  
+
   useEffect(() => {
     const lenis = new Lenis();
     function raf(time) {

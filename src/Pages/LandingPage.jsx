@@ -25,13 +25,13 @@ function LandingPage() {
               insurance and much more.
             </p>
             <div className="mt-12 sm:mt-9 flex items-center flex-col sm:flex-row sm:justify-center  lxg:justify-start sm:gap-4">
-              <Link to="book-nurse"><button className="bg-green-600 w-48 mb-4 sm:mb-0 sm:min-w-[10rem] transition-all shadow-lg shadow-green-300 hover:shadow-lg hover:scale-105 hover:shadow-green-400 text-white px-12 py-3 rounded-sm">
+              <Link to="book-nurse"><button className="bg-green-600 w-48 mb-4 sm:mb-0 sm:min-w-[10rem] transition-all shadow-lg shadow-black hover:shadow-lg hover:scale-105 hover:shadow-green-400 text-white px-12 py-3 rounded-sm">
                 Book Nurse
               </button>
               </Link>
               <a href="#block2">
                 {/* TODO : Change this about to some block below since we are not planning an about page */}
-                <button className="bg-black w-48 mb-4 sm:mb-0 sm:min-w-[10rem] transition-all shadow-lg shadow-zinc-300 hover:shadow-lg hover:shadow-zinc-400 hover:scale-105 text-white px-12 py-3 rounded-sm">
+                <button className="bg-sky-500/100 w-48 mb-4 sm:mb-0 sm:min-w-[10rem] transition-all shadow-lg shadow-black hover:shadow-lg hover:shadow-cyan-400 hover:scale-105 text-white px-12 py-3 rounded-sm">
                   Learn More
                 </button>
               </a>
