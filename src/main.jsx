@@ -62,7 +62,7 @@ const App = () => {
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
-  
+
   useEffect(() => {
     const lenis = new Lenis();
     function raf(time) {
