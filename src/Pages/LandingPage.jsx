@@ -44,6 +44,7 @@ function LandingPage() {
               src="/assets/Nurse.png"
               style={{ filter: "drop-shadow(0 0 0.25rem rgba(0, 0, 0, 0.3))" }}
               alt="nurse"
+              className="w-[22rem]"
             />
           </div>
         </div>
@@ -52,10 +53,10 @@ function LandingPage() {
         </div>
 
         {/* Block 2 */}
-        <div className="px-8 lg:px-16  sm:mt-28 md:mt-28 mb-28" id="block2">
-          <div className="text-center mb-14 ">
-            <h3 className="text-3xl font-medium">Book a health checkup now</h3>
-            <h2 className="text-5xl font-bold">
+        <div className="px-8 lg:px-16 mt-24  sm:mt-28 md:my-28" id="block2">
+          <div className="text-center mb-14 flex flex-col gap-4">
+            <h3 className="text-xl sm:text-3xl font-medium">Book a health checkup now</h3>
+            <h2 className="text-4xl sm:text-5xl font-bold">
               Quick & easy care for elderly and your loved ones
             </h2>
           </div>
