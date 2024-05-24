@@ -79,7 +79,7 @@ function Footer() {
                   </li>
                   <li className="mb-4">
                     <a href="/guidelines" className="hover:underline">
-                      Guidelines
+                      Brand Guidelines
                     </a>
                   </li>
                 </ul>

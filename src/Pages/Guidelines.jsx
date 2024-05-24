@@ -52,7 +52,7 @@ const BrandGuidelines = () => {
           <section>
             <p>Last updated: May 24, 2024</p>
             <p>
-              Welcome to NactoCare Brand Center. These Brand Guidelines govern the use of our brand assets, including our logo, colors, and typography. By using any of our brand assets, you agree to comply with and be bound by the terms outlined in these guidelines.
+              Welcome to Nactore Brand Center. These Brand Guidelines govern the use of our brand assets, including our logo, colors, and typography. By using any of our brand assets, you agree to comply with and be bound by the terms outlined in these guidelines.
             </p>
           </section>
           <section>
