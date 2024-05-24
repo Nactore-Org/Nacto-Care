@@ -1,6 +1,6 @@
 import React from 'react';
 import brand from "../../public/assets/brand.avif";
-import guidelines from '../../public/assets/guidelines.webp';
+import guidelines from '../../public/assets/guidelines.jpg';
 import care from '../../public/assets/care.png';
 import caretaker from '../../public/assets/caretaker.png';
 import reliable from '../../public/assets/reliable.png';
@@ -36,7 +36,7 @@ const BrandCenter = () => {
 
         <div className='flex flex-col lg:flex-row items-center justify-center lg:justify-between'>
           <div className='w-full lg:w-1/2'>
-            <h2 className='text-xl font-bold lg:text-3xl'>Guidelines</h2><br/>
+            <h2 className='text-xl font-bold lg:text-3xl'>Brand Guidelines</h2><br/>
             <p>Here you will find our comprehensive brand guidelines, designed to help you create various communication assets such as posters, brochures, roll-ups, site signages, and imagery. These guidelines ensure consistency in our visual and verbal identity across all platforms, maintaining a cohesive and professional brand image. Our brand guidelines cover key aspects including logo usage, color palette, typography, imagery style, and tone of voice, empowering you to effectively represent our brand in all communications.</p><br/>
             <a href="/guidelines" className='text-blue-800 underline font-semibold link'>Read more</a><br/>
           </div>
