@@ -61,7 +61,7 @@ function CareersPage() {
             </div>
             <div className="flex flex-col  gap-3 items-center  smd:gap-5 smd:flex smd:flex-row max-w-[70ch] mb-4">
               <div>
-                <img src="\assets\time.png" height={100} width={100} alt="" className="w-[5rem] sm:w-[4rem] smd:w-[7rem] lg:w-[6rem] xl:w-[5rem]" />
+                <img src="\assets\times.png" height={100} width={100} alt="" className="w-[5rem] sm:w-[4rem] smd:w-[7rem] lg:w-[6rem] xl:w-[5rem]" />
               </div>
               <div className="max-w-[70ch] mb-3">
                 <h2 className="text-zinc-700 font-bold text-xl sm:mb-2 smd:mb-0">
@@ -76,7 +76,7 @@ function CareersPage() {
             </div>
             <div className=" flex flex-col gap-3  items-center smd:gap-5  smd:flex  smd:flex-row max-w-[70ch] mb-4">
               <div>
-                <img src="\assets\goal.png" height={100} width={100} className="w-[5rem] sm:w-[4rem] smd:w-[7rem] lg:w-[6rem] xl:w-[5rem]" />
+                <img src="\assets\up.png" height={100} width={100} className="w-[5rem] sm:w-[4rem] smd:w-[7rem] lg:w-[6rem] xl:w-[5rem]" />
               </div>
               <div className="max-w-[70ch] mb-3">
                 <h2 className="text-zinc-700 font-bold text-xl sm:mb-2 smd:mb-0">
