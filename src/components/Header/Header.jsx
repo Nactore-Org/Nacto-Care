@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import MenuOverlay from "./MenuOverlay";
 import { FaXmark } from "react-icons/fa6";
-import '../../index.css';
+import "../../index.css";
 import { ThemeContext } from "../../main";
 
 const navLinks = [
@@ -49,14 +49,19 @@ function Header() {
         <div className="md:mx-10 lg:mx-4">
           <ul className="hidden md:flex md:gap-3 lg:gap-6 font-medium">
             {navLinks.map((link, index) => (
-              <li key={index} className="hover:scale-110 duration-100 ease-in-out">
+              <li
+                key={index}
+                className="hover:scale-110 duration-100 ease-in-out"
+              >
                 <NavLink
                   to={link.to}
                   className={({ isActive }) =>
-                    `cursor-pointer ${theme === "dark" ? "text-white" : "text-gray-800"
-                    } ${isActive
-                      ? "text-black underline decoration-green-500 underline-offset-[0.5rem] decoration-2"
-                      : "text-gray-500"
+                    `cursor-pointer ${
+                      theme === "dark" ? "text-white" : "text-gray-800"
+                    } ${
+                      isActive
+                        ? "text-black underline decoration-green-500 underline-offset-[0.5rem] decoration-2"
+                        : "text-gray-500"
                     } hover:text-green-500`
                   }
                 >
@@ -98,9 +103,19 @@ function Header() {
           </button>
         </div>
         <div
-          className={`toggle-button ${themes === "dark" ? "dark" : ""}`}
+          className={`tdnn relative h-8 w-16 rounded-full transition-all duration-500 ease-in-out ${
+            theme === "dark" ? "bg-[#423966]" : "bg-[#FFBF71]"
+          }`}
           onClick={handleThemeChange}
-        ></div>
+        >
+          <div
+            className={`moon absolute block rounded-full transition-all duration-600 ease-in-out ${
+              theme === "dark"
+                ? "top-[4px] left-[4px] w-[22px] h-[22px] rotate-[-75deg] bg-[#423966] shadow-[inset_6px_5px_0_0px_#D9FBFF,rgba(255,255,255,0.1)_0px_-14px_0_-9px,rgba(255,255,255,0.1)_6px_14px_0_-9px,rgba(255,255,255,0.1)_4px_26px_0_-8px,rgba(255,255,255,0.1)_12px_4px_0_-8px,rgba(255,255,255,0.1)_16px_16px_0_-9px,rgba(255,255,255,0.1)_12px_26px_0_-9px,rgba(255,255,255,0.1)_-8px_14px_0_-9px,rgba(255,255,255,0.1)_-2px_20px_0_-9px]"
+                : "top-[9px] left-[36px] w-[14px] h-[14px] rotate-0 bg-white shadow-[inset_6px_6px_0_10px_white,0_-10px_0_-5px_white,7px_-7px_0_-6px_white,10px_0_0_-5px_white,7px_7px_0_-6px_white,0_10px_0_-5px_white,-7px_7px_0_-6px_white,-10px_0_0_-5px_white,-7px_-7px_0_-6px_white]"
+            }`}
+          ></div>
+        </div>
       </div>
       {isNavBarOpen && (
         <MenuOverlay links={navLinks} setIsNavBarOpen={setIsNavBarOpen} />
