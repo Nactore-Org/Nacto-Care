@@ -12,7 +12,7 @@ function BackBtn({ Page }) {
         </span>
         <span className="text-green-500 font-semibold">{Page}</span>
       </div>
-      <div className="font-bold text-4xl">{Page}</div>
+      <div className="font-bold text-4xl text-center lg:text-left">{Page}</div>
     </>
   );
 }
