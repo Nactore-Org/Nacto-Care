@@ -45,28 +45,28 @@ body.dark .footer {
 }
 
 body.dark .footer-heading {
-  color: white
+  color: white;
 }
 
 body.dark .blog {
   background-color: black;
-  color: white
+  color: white;
 }
 
 body.dark .contact {
   background-color: black;
-  color: white
+  color: white;
 }
 
 body.dark .blog-text {
   background-color: rgb(192, 192, 192);
-  color: white
+  color: white;
 }
 
 body.dark .login,
 .signup {
   background-color: #121212;
-  color: white
+  color: white;
 }
 
 /* Add light mode styles for signup */
@@ -85,35 +85,4 @@ body.dark .privacy {
 
 .nav-link-active {
   @apply underline decoration-green-500 underline-offset-2 decoration-2;
-}
-
-.toggle-button {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 30px;
-  background-color: #faf7f762;
-  border-radius: 15px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.toggle-button:before {
-  content: "";
-  position: absolute;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background-color: white;
-  top: 2px;
-  left: 2px;
-  transition: transform 0.3s;
-}
-
-.toggle-button.dark {
-  background-color: #000;
-}
-
-.toggle-button.dark:before {
-  transform: translateX(30px);
 }
