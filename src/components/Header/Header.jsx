@@ -90,10 +90,10 @@ function Header() {
           )}
         </div>
         <div className="hidden md:flex gap-4 mx-4">
-          <button className="bg-green-600 hover:scale-105 hover:shadow-lg hover:shadow-green-300 transition-all text-white px-[1.5rem] font-medium py-[0.5rem] rounded-sm shadow-lg shadow-green-200">
+          <button className="bg-green-600 hover:scale-105 hover:shadow-lg hover:shadow-green-300 transition-all text-white px-[1.5rem] font-medium py-[0.5rem] rounded-sm shadow-lg shadow-black">
             <Link to="/login">Login</Link>
           </button>
-          <button className="bg-green-600 hover:scale-105 hover:shadow-lg hover:shadow-green-300 transition-all text-white px-[1.5rem] font-medium py-[0.5rem] rounded-sm shadow-lg shadow-green-200">
+          <button className="bg-green-600 hover:scale-105 hover:shadow-lg hover:shadow-green-300 transition-all text-white px-[1.5rem] font-medium py-[0.5rem] rounded-sm shadow-lg shadow-black">
             <Link to="signup">Signup</Link>
           </button>
         </div>
