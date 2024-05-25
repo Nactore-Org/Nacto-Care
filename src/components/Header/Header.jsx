@@ -103,7 +103,7 @@ function Header() {
           </button>
         </div>
         <div
-          className={`tdnn relative h-8 w-16 rounded-full transition-all duration-500 ease-in-out ${
+          className={`hidden md:block tdnn relative h-8 w-16 rounded-full transition-all duration-500 ease-in-out ${
             theme === "dark" ? "bg-[#423966]" : "bg-[#FFBF71]"
           }`}
           onClick={handleThemeChange}
@@ -118,7 +118,7 @@ function Header() {
         </div>
       </div>
       {isNavBarOpen && (
-        <MenuOverlay links={navLinks} setIsNavBarOpen={setIsNavBarOpen} />
+        <MenuOverlay links={navLinks} setIsNavBarOpen={setIsNavBarOpen} theme={[theme, handleThemeChange]} />
       )}
     </div>
   );
