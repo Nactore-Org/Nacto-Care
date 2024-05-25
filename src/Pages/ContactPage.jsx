@@ -10,7 +10,7 @@ function ContactPage() {
 
     // Trigger a Toastify notification
     Toastify({
-      text: "Message sent successfully!",
+      text: "Thanks for contacting us. We care for you and will get back to you soon !",
       duration: 3000, // Duration in milliseconds
       close: true,
       gravity: "bottom", // `top` or `bottom`
