@@ -25,13 +25,13 @@ function LandingPage() {
               insurance and much more.
             </p>
             <div className="mt-12 sm:mt-9 flex items-center flex-col sm:flex-row sm:justify-center  lxg:justify-start sm:gap-4">
-              <Link to="book-nurse"><button className="bg-green-600 w-48 mb-4 sm:mb-0 sm:min-w-[10rem] transition-all shadow-lg shadow-green-300 hover:shadow-lg hover:scale-105 hover:shadow-green-400 text-white px-12 py-3 rounded-sm">
+              <Link to="book-nurse"><button className="bg-green-600 w-48 mb-4 sm:mb-0 sm:min-w-[10rem] transition-all shadow-lg shadow-black hover:shadow-lg hover:scale-105 hover:shadow-green-400 text-white px-12 py-3 rounded-sm">
                 Book Nurse
               </button>
               </Link>
               <a href="#block2">
                 {/* TODO : Change this about to some block below since we are not planning an about page */}
-                <button className="bg-black w-48 mb-4 sm:mb-0 sm:min-w-[10rem] transition-all shadow-lg shadow-zinc-300 hover:shadow-lg hover:shadow-zinc-400 hover:scale-105 text-white px-12 py-3 rounded-sm">
+                <button className="bg-sky-500/100 w-48 mb-4 sm:mb-0 sm:min-w-[10rem] transition-all shadow-lg shadow-black hover:shadow-lg hover:shadow-cyan-400 hover:scale-105 text-white px-12 py-3 rounded-sm">
                   Learn More
                 </button>
               </a>
@@ -44,6 +44,7 @@ function LandingPage() {
               src="/assets/Nurse.png"
               style={{ filter: "drop-shadow(0 0 0.25rem rgba(0, 0, 0, 0.3))" }}
               alt="nurse"
+              className="w-[22rem]"
             />
           </div>
         </div>
@@ -52,10 +53,10 @@ function LandingPage() {
         </div>
 
         {/* Block 2 */}
-        <div className="px-8 lg:px-16  sm:mt-28 md:mt-28 mb-28" id="block2">
-          <div className="text-center mb-14 ">
-            <h3 className="text-3xl font-medium">Book a health checkup now</h3>
-            <h2 className="text-5xl font-bold">
+        <div className="px-8 lg:px-16 mt-24  sm:mt-28 md:my-28" id="block2">
+          <div className="text-center mb-14 flex flex-col gap-4">
+            <h3 className="text-xl sm:text-3xl font-medium">Book a health checkup now</h3>
+            <h2 className="text-4xl sm:text-5xl font-bold">
               Quick & easy care for elderly and your loved ones
             </h2>
           </div>
@@ -80,7 +81,7 @@ function LandingPage() {
             {/* Contact Support */}
             <div className="flex flex-col items-center mt-14 lg:mt-0">
               <img
-                src="/assets/customer-support.png"
+                src="/assets/customer.png"
                 width={130}
                 height={130}
                 className="block"

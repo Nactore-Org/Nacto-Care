@@ -7,6 +7,7 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import "./index.css";
+import Lenis from '@studio-freight/lenis';
 import Layout from "./components/Layout.jsx";
 import LandingPage from "./Pages/LandingPage.jsx";
 import CareersPage from "./Pages/CareersPage.jsx";
@@ -20,6 +21,8 @@ import Blogs from "./Pages/Blogs.jsx";
 import PrivacyPolicy from "./Pages/PrivacyPolicy.jsx";
 import Licensing from "./Pages/Licensing.jsx";
 import TermsAndConditions from "./Pages/TermsAndConditions.jsx";
+import BrandCenter from "./Pages/BrandCenter.jsx";
+import ScrollToTopButton from "./ScrollToTopButton"; // Import ScrollToTopButton
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -27,6 +30,7 @@ const router = createBrowserRouter(
       <Route path="" element={<LandingPage />} />
       <Route path="careers" element={<CareersPage />} />
       <Route path="contact" element={<ContactPage />} />
+      <Route path="ourbrand" element={<BrandCenter />} />
       <Route path="login" element={<LoginPage />} />
       <Route path="signup" element={<SignupPage />} />
       <Route path="about" element={<AboutPage />} />
@@ -60,10 +64,20 @@ const App = () => {
     document.body.className = theme;
   }, [theme]);
 
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }, []);
+
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <React.StrictMode>
         <RouterProvider router={router} />
+        <ScrollToTopButton /> {/* Add ScrollToTopButton here */}
       </React.StrictMode>
     </ThemeContext.Provider>
   );
