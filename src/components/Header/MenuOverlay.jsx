@@ -20,10 +20,12 @@ const MenuOverlay = ({ links, setIsNavBarOpen, theme:[theme, handleThemeChange] 
             <NavLink
               to={link.to}
               className={({ isActive }) =>
-                `cursor-pointer text-gray-800 ${
+                `cursor-pointer ${
+                  theme === "dark" ? "text-white" : "text-gray-800"
+                } ${
                   isActive
-                    ? "text-black underline decoration-green-500 underline-offset-[0.5rem] decoration-2"
-                    : "text-gray-500"
+                    ? "underline decoration-green-500 underline-offset-[0.5rem] decoration-2"
+                    : ""
                 } hover:text-green-500`
               }
               onClick={handleClick} // Close navigation bar on link click
