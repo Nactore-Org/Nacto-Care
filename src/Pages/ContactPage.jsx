@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import BackBtn from "../components/BackBtn/BackBtn";
-import { ThemeContext } from "C:/Users/user/Desktop/Nacto-Care/src/main"; // Adjusted import path
+import { ThemeContext } from "/src/main"; // Adjusted import path
 
 function ContactPage() {
   const { theme } = useContext(ThemeContext); // Access the theme
