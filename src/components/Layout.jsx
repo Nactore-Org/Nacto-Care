@@ -12,7 +12,7 @@ function Layout() {
       <Footer />
       <Helmet>
         <script src="https://cdn.botpress.cloud/webchat/v2/inject.js" defer async></script>
-        <script src="https://mediafiles.botpress.cloud/7b050b54-3832-4502-b938-a6a018f8f015/webchat/v2/config.js" defer async></script>
+        <script src="https://mediafiles.botpress.cloud/b2905264-a15e-41ab-83e9-7db49dbaabc3/webchat/v2/config.js" defer async></script>
       </Helmet>
     </div>
   );
