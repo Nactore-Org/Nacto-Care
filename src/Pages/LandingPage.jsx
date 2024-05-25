@@ -1,6 +1,7 @@
 import React from "react";
 import Form from "../components/Form/Form";
 import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
 function LandingPage() {
   return (
@@ -25,16 +26,16 @@ function LandingPage() {
               insurance and much more.
             </p>
             <div className="mt-12 sm:mt-9 flex items-center flex-col sm:flex-row sm:justify-center  lxg:justify-start sm:gap-4">
-              <Link to="book-nurse"><button className="bg-green-600 w-48 mb-4 sm:mb-0 sm:min-w-[10rem] transition-all shadow-lg shadow-black hover:shadow-lg hover:scale-105 hover:shadow-green-400 text-white px-12 py-3 rounded-sm">
-                Book Nurse
-              </button>
+              <Link to="book-nurse">
+                <button className="bg-green-600 w-48 mb-4 sm:mb-0 sm:min-w-[10rem] transition-all shadow-lg shadow-black hover:shadow-lg hover:scale-105 hover:shadow-green-400 text-white px-12 py-3 rounded-sm">
+                  Book Nurse
+                </button>
               </Link>
-              <a href="#block2">
-                {/* TODO : Change this about to some block below since we are not planning an about page */}
+              <ScrollLink to="block2" smooth={true} offset={-125} duration={70}>
                 <button className="bg-sky-500/100 w-48 mb-4 sm:mb-0 sm:min-w-[10rem] transition-all shadow-lg shadow-black hover:shadow-lg hover:shadow-cyan-400 hover:scale-105 text-white px-12 py-3 rounded-sm">
                   Learn More
                 </button>
-              </a>
+              </ScrollLink>
             </div>
           </div>
           <div className="py-10  items-end hidden lxg:flex px-7">
@@ -55,7 +56,9 @@ function LandingPage() {
         {/* Block 2 */}
         <div className="px-8 lg:px-16 mt-24  sm:mt-28 md:my-28" id="block2">
           <div className="text-center mb-14 flex flex-col gap-4">
-            <h3 className="text-xl sm:text-3xl font-medium">Book a health checkup now</h3>
+            <h3 className="text-xl sm:text-3xl font-medium">
+              Book a health checkup now
+            </h3>
             <h2 className="text-4xl sm:text-5xl font-bold">
               Quick & easy care for elderly and your loved ones
             </h2>
