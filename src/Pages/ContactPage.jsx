@@ -2,7 +2,6 @@
 import React from "react";
 import Toastify from 'toastify-js';
 import "toastify-js/src/toastify.css";
-=======
 import React, { useContext } from "react";
 import BackBtn from "../components/BackBtn/BackBtn";
 import { ThemeContext } from "/src/main"; // Adjusted import path
@@ -24,7 +23,7 @@ function ContactPage() {
       stopOnFocus: true, // Prevents dismissing of toast on hover
     }).showToast();
   };
-=======
+
   const { theme } = useContext(ThemeContext); // Access the theme
 
 
@@ -99,7 +98,7 @@ function ContactPage() {
             </button>
           </form>
         </div>
-=======
+
       <div>
         <form className="bg-white dark:bg-gray-800 contact">
           <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
