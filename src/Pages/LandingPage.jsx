@@ -31,7 +31,7 @@ function LandingPage() {
                   Book Nurse
                 </button>
               </Link>
-              <ScrollLink to="block2" smooth={true} offset={-125} duration={70}>
+              <ScrollLink to="block2" smooth={true} offset={-125} duration={85}>
                 <button className="bg-sky-500/100 w-48 mb-4 sm:mb-0 sm:min-w-[10rem] transition-all shadow-lg shadow-black hover:shadow-lg hover:shadow-cyan-400 hover:scale-105 text-white px-12 py-3 rounded-sm">
                   Learn More
                 </button>
