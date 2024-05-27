@@ -42,7 +42,7 @@ function LandingPage() {
             <img
               width={400}
               height={400}
-              src="/assets/Nurse.png"
+              src="/assets/Nurse.webp"
               style={{ filter: "drop-shadow(0 0 0.25rem rgba(0, 0, 0, 0.3))" }}
               alt="nurse"
               className="w-[22rem]"
@@ -66,7 +66,7 @@ function LandingPage() {
           <div className="flex flex-col  m-auto max-w-[75rem] lg:flex-row justify-evenly mt-14 lg:mt-28">
             <div className="flex flex-col items-center">
               <img
-                src="/assets/nurseFlaticon.png"
+                src="/assets/nurseFlaticon.webp"
                 width={130}
                 height={130}
                 className="block"
@@ -84,7 +84,7 @@ function LandingPage() {
             {/* Contact Support */}
             <div className="flex flex-col items-center mt-14 lg:mt-0">
               <img
-                src="/assets/customer.png"
+                src="/assets/customer.webp"
                 width={130}
                 height={130}
                 className="block"
@@ -101,7 +101,7 @@ function LandingPage() {
             {/* Let's Ride */}
             <div className="flex flex-col items-center mt-14 lg:mt-0">
               <img
-                src="/assets/health-insurance.png"
+                src="/assets/health-insurance.webp"
                 width={130}
                 height={130}
                 className="block"
@@ -158,7 +158,7 @@ function LandingPage() {
               <div className="flex flex-col gap-3  items-center smd:gap-5 smd:flex smd:flex-row max-w-[70ch] mb-4">
                 <div>
                   <img
-                    src="\assets\health-professional.png"
+                    src="\assets\health-professional.webp"
                     height={100}
                     width={100}
                     alt=""
@@ -177,7 +177,7 @@ function LandingPage() {
               </div>
               <div className="flex flex-col  gap-3 items-center  smd:gap-5 smd:flex smd:flex-row max-w-[70ch] mb-4">
                 <div>
-                  <img src="\assets\debt.png" height={100} width={100} alt="" />
+                  <img src="\assets\debt.webp" height={100} width={100} alt="" />
                 </div>
                 <div className="max-w-[70ch] mb-3">
                   <h2 className="text-zinc-700 font-bold text-xl contact-para">
@@ -192,7 +192,7 @@ function LandingPage() {
               </div>
               <div className=" flex flex-col gap-3  items-center smd:gap-5  smd:flex  smd:flex-row max-w-[70ch] mb-4">
                 <div>
-                  <img src="\assets\india.png" height={100} width={100} />
+                  <img src="\assets\india.webp" height={100} width={100} />
                 </div>
                 <div className="max-w-[70ch] mb-3">
                   <h2 className="text-zinc-700 font-bold text-xl contact-para">

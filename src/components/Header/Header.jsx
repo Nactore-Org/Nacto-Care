@@ -43,7 +43,7 @@ function Header() {
       <div className="flex justify-between md:justify-evenly sticky top-0 z-[999] backdrop-blur-sm items-center py-[1.5rem] px-4 md:px-10 ">
         <div className="hover:scale-105 duration-100 ease-in-out">
           <Link to="/">
-            <img width={70} src="\assets\icon.png" alt="Logo" />
+            <img width={70} src="\assets\icon.webp" alt="Logo" />
           </Link>
         </div>
         <div className="md:mx-10 lg:mx-4">
