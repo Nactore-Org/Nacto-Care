@@ -1,9 +1,9 @@
 import React from 'react';
-import brand from "../../public/assets/brand.avif";
-import guidelines from '../../public/assets/guidelines.jpg';
-import care from '../../public/assets/care.png';
-import caretaker from '../../public/assets/caretaker.png';
-import reliable from '../../public/assets/reliable.png';
+import brand from "../../public/assets/brand.webp";
+import guidelines from '../../public/assets/guidelines.webp';
+import care from '../../public/assets/care.webp';
+import caretaker from '../../public/assets/caretaker.webp';
+import reliable from '../../public/assets/reliable.webp';
 import '../styles/BrandCenter.css';
 
 const BrandCenter = () => {
@@ -25,12 +25,12 @@ const BrandCenter = () => {
 
         <div className='flex flex-col lg:flex-row items-center justify-center lg:justify-between'>
           <div className='w-full lg:w-2/5 flex items-start justify-center mb-8'>
-            <img width={70} src="\assets\icon.png" alt="Logo" className='h-2/3 w-2/3'/>
+            <img width={70} src="\assets\icon.webp" alt="Logo" className='h-2/3 w-2/3'/>
           </div>
           <div className='w-full lg:w-1/2'>
             <h2 className='text-xl font-bold lg:text-3xl'>Download Brand Assets</h2><br/>
             <p>Download our brand assets to access high-quality logos, images, fonts, and design elements. These assets adhere to our brand guidelines, ensuring consistency and professionalism in your communications. Whether you're creating posters, brochures, or digital content, our brand assets will help you maintain the integrity of our brand identity across all channels.</p><br/>
-            <a href="\assets\icon.png" className='text-blue-800 underline font-semibold link' download>Click here to Download Logo</a><br/>
+            <a href="\assets\icon.webp" className='text-blue-800 underline font-semibold link' download>Click here to Download Logo</a><br/>
           </div>
         </div>
 
