@@ -9,22 +9,27 @@ const navLinks = [
   {
     title: "Home",
     to: "/",
+    icon: "ri-home-fill"// Added icon property
   },
   {
     title: "Careers",
     to: "/careers",
+    icon: "ri-focus-2-fill"
   },
   {
     title: "Blog",
     to: "/blog",
+    icon: "ri-newspaper-fill"
   },
   {
     title: "Contact",
     to: "/contact",
+    icon: "ri-customer-service-2-fill"
   },
   {
     title: "About",
     to: "/about",
+    icon: "ri-nurse-fill"
   },
 ];
 
@@ -43,7 +48,9 @@ function Header() {
       <div className="flex justify-between md:justify-evenly sticky top-0 z-[999] backdrop-blur-sm items-center py-[1.5rem] px-4 md:px-10 ">
         <div className="hover:scale-105 duration-100 ease-in-out">
           <Link to="/">
+
             <img width={70} src="\assets\icon.webp" alt="Logo" />
+
           </Link>
         </div>
         <div className="md:mx-10 lg:mx-4">
@@ -51,7 +58,7 @@ function Header() {
             {navLinks.map((link, index) => (
               <li
                 key={index}
-                className="hover:scale-110 duration-100 ease-in-out"
+                className="hover:scale-110 duration-100 ease-in-out flex items-center"
               >
                 <NavLink
                   to={link.to}
@@ -60,11 +67,12 @@ function Header() {
                       theme === "dark" ? "text-white" : "text-gray-800"
                     } ${
                       isActive
-                        ? "underline decoration-green-500 underline-offset-[0.5rem] decoration-2"
+                        ? "text-green-500 border-b-2 border-green-500"
                         : ""
-                    } hover:text-green-500`
+                    } hover:text-green-500 flex items-center`
                   }
                 >
+                  {link.icon && <i className={`${link.icon} mr-2`}></i>}
                   {link.title}
                 </NavLink>
               </li>
@@ -82,16 +90,13 @@ function Header() {
               }}
             />
           ) : (
-            <img
+            <i
               id="hamburger"
-              width="30"
-              height="30"
-              src="https://img.icons8.com/ios-filled/50/dc2626/menu--v1.png"
-              alt="menu--v1"
+              className="ri-menu-line w-[30px] h-[30px] text-[#DC2626]"
               onClick={() => {
                 setIsNavBarOpen(!isNavBarOpen);
               }}
-            />
+            ></i>
           )}
         </div>
         <div className="hidden md:flex gap-4 mx-4">
@@ -118,7 +123,11 @@ function Header() {
         </div>
       </div>
       {isNavBarOpen && (
-        <MenuOverlay links={navLinks} setIsNavBarOpen={setIsNavBarOpen} theme={[theme, handleThemeChange]} />
+        <MenuOverlay
+          links={navLinks}
+          setIsNavBarOpen={setIsNavBarOpen}
+          theme={[theme, handleThemeChange]}
+        />
       )}
     </div>
   );

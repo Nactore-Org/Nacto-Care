@@ -55,6 +55,11 @@ function Footer() {
                       Contact Us
                     </a>
                   </li>
+                  <li className="mb-4">
+                    <a href="/faq" className="hover:underline">
+                      FAQ
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div>
