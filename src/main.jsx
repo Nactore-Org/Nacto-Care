@@ -22,6 +22,7 @@ import Licensing from "./Pages/Licensing.jsx";
 import TermsAndConditions from "./Pages/TermsAndConditions.jsx";
 import BrandCenter from "./Pages/BrandCenter.jsx";
 import Guidelines from "./Pages/Guidelines.jsx";
+import Faq from "./Pages/Faq.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -40,6 +41,7 @@ const router = createBrowserRouter(
       <Route path="/guidelines" element={<Guidelines/>}/>
       <Route path="/licensing" element={<Licensing />} />
       <Route path="/termsandconditions" element={<TermsAndConditions />} />
+      <Route path="/faq" element={<Faq/>}/>
     </Route>
   )
 );
