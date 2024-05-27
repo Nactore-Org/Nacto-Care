@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import MenuOverlay from "./MenuOverlay";
 import { FaXmark } from "react-icons/fa6";
@@ -41,6 +41,7 @@ function Header() {
   const toggleBodyScroll = ()=>{
     const styles = {
       position:"fixed",
+      maxWidth:"100vw",
       overflow: "hidden"
     }
     
@@ -56,9 +57,13 @@ function Header() {
     }
   }
 
+  useEffect(()=>{
+    toggleBodyScroll()
+  }, [isNavBarOpen])
+
   return (
     <div className="app-header">
-      <div className="flex justify-between md:justify-evenly fixed w-lvw top-0 z-[999] backdrop-blur-sm items-center py-[1.5rem] px-4 md:px-10 ">
+      <div className="flex justify-between md:justify-evenly sticky top-0 z-[999] backdrop-blur-sm items-center py-[1.5rem] px-4 md:px-10 ">
         <div className="hover:scale-105 duration-100 ease-in-out">
           <Link to="/">
             <img width={70} src="\assets\icon.png" alt="Logo" />
@@ -96,7 +101,6 @@ function Header() {
               alt="x-mark"
               className="w-[30px] h-[30px] text-[#DC2626]"
               onClick={() => {
-                toggleBodyScroll()
                 setIsNavBarOpen(!isNavBarOpen);
               }}
             />
@@ -108,7 +112,6 @@ function Header() {
               src="https://img.icons8.com/ios-filled/50/dc2626/menu--v1.png"
               alt="menu--v1"
               onClick={() => {
-                toggleBodyScroll()
                 setIsNavBarOpen(!isNavBarOpen);
               }}
             />
@@ -138,7 +141,7 @@ function Header() {
         </div>
       </div>
       {isNavBarOpen && (
-        <MenuOverlay links={navLinks} setIsNavBarOpen={setIsNavBarOpen} theme={[theme, handleThemeChange]} />
+        <MenuOverlay links={navLinks} setIsNavBarOpen={setIsNavBarOpen} theme={[theme, handleThemeChange]}/>
       )}
     </div>
   );
