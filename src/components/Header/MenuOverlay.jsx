@@ -10,7 +10,7 @@ const MenuOverlay = ({ links, setIsNavBarOpen, theme:[theme, handleThemeChange] 
 
   return (
     // ul element to contain the menu links
-    <ul className="absolute md:hidden w-screen items-center text-center z-20 app-header h-[calc(100vh-7.375rem)] flex flex-col justify-evenly">
+    <ul className="absolute pt-20 md:hidden w-screen items-center text-center z-20 app-header h-[calc(120vh-7.375rem)] flex flex-col justify-evenly">
       {/* Mapping over the links array to create each link item */}
       {links.map((link, index) => (
         <li key={index}>
@@ -38,7 +38,7 @@ const MenuOverlay = ({ links, setIsNavBarOpen, theme:[theme, handleThemeChange] 
       {/* Login button */}
       <li>
         <button 
-          className="bg-green-600 hover:scale-105 hover:shadow-lg hover:shadow-green-300 transition-all text-white px-[1.8rem] font-medium py-[0.5rem] rounded-sm shadow-lg shadow-green-200"
+          className="bg-green-600 hover:scale-105 hover:shadow-lg hover:shadow-green-300 transition-all text-white px-[1.8rem] font-medium py-[0.5rem] rounded-sm shadow-lg shadow-black"
           onClick={handleClick} // Added onClick to close the menu
         >
           <Link to="/login">Login</Link> {/* Link to the login page */}
@@ -47,7 +47,7 @@ const MenuOverlay = ({ links, setIsNavBarOpen, theme:[theme, handleThemeChange] 
       {/* Signup button */}
       <li>
         <button 
-          className="bg-green-600 hover:scale-105 hover:shadow-lg hover:shadow-green-300 transition-all text-white px-[1.8rem] font-medium py-[0.5rem] rounded-sm shadow-lg shadow-green-200"
+          className="bg-green-600 hover:scale-105 hover:shadow-lg hover:shadow-green-300 transition-all text-white px-[1.8rem] font-medium py-[0.5rem] rounded-sm shadow-lg shadow-black"
           onClick={handleClick} // Added onClick to close the menu
         >
           <Link to="signup">Signup</Link> {/* Link to the signup page */}
