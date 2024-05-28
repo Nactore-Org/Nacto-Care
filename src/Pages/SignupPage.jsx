@@ -100,11 +100,11 @@ function SignupPage() {
                 >
                   Create an account
                 </button>
-                <p class="text-sm font-light text-gray-500">
+                <p class="text-sm font-light text-gray-500 dark:text-gray-500">
                   Already have an account?{" "}
                   <Link
                     to="/login"
-                    class="font-medium text-primary-600 hover:underline"
+                    class="font-medium text-primary-600 hover:underline dark:text-primary-500"
                   >
                     Login here
                   </Link>

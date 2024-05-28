@@ -73,7 +73,7 @@ function LoginPage() {
                   </div>
                   <a
                     href="#"
-                    class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500"
+                    class="text-sm font-medium text-primary-600 hover:underline dark:text-blue-950"
                   >
                     Forgot password?
                   </a>
