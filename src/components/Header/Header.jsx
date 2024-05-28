@@ -62,9 +62,6 @@ function Header() {
     }
   }
 
-  useEffect(()=>{
-    toggleBodyScroll()
-  }, [isNavBarOpen])
 
   return (
     <div className="app-header">
@@ -109,6 +106,7 @@ function Header() {
               alt="x-mark"
               className="w-[30px] h-[30px] text-[#DC2626]"
               onClick={() => {
+                toggleBodyScroll();
                 setIsNavBarOpen(!isNavBarOpen);
               }}
             />
@@ -117,6 +115,7 @@ function Header() {
               id="hamburger"
               className="ri-menu-line w-[30px] h-[30px] text-[#DC2626]"
               onClick={() => {
+                toggleBodyScroll();
                 setIsNavBarOpen(!isNavBarOpen);
               }}
             ></i>
@@ -150,6 +149,7 @@ function Header() {
           links={navLinks}
           setIsNavBarOpen={setIsNavBarOpen}
           theme={[theme, handleThemeChange]}
+          toggleBodyScroll={toggleBodyScroll}
         />
       )}
     </div>

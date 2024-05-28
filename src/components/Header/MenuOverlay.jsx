@@ -2,9 +2,10 @@ import React from "react"; // Importing React to use JSX syntax
 import PropTypes from "prop-types"; // Importing PropTypes for type-checking
 import { Link, NavLink } from "react-router-dom"; // Importing Link and NavLink for navigation
 
-const MenuOverlay = ({ links, setIsNavBarOpen, theme:[theme, handleThemeChange]}) => {
+const MenuOverlay = ({ links, setIsNavBarOpen, theme:[theme, handleThemeChange], toggleBodyScroll}) => {
   // Function to handle click event, which closes the navigation bar
   const handleClick = () => {
+    toggleBodyScroll();
     setIsNavBarOpen(false);
   };
 
