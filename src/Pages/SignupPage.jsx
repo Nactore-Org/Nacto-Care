@@ -13,7 +13,7 @@ function SignupPage() {
             href="#"
             class="flex items-center mb-6 text-2xl font-semibold text-gray-900"
           >
-            <img class="w-8 h-8 mr-2" src="/assets/icon.png" alt="logo" />
+            <img class="w-8 h-8 mr-2" src="/assets/icon.webp" alt="logo" />
             <div className="signup">Nacto Care</div>
           </a>
           <div class="w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0">
