@@ -1,0 +1,39 @@
+
+  
+  .main-heading {
+    display: flex;
+    margin-top: 30px;
+    padding: 20px;
+    background: #f1f4ff;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+    cursor: pointer;
+  }
+  
+  .main-heading h3 {
+    margin-left: 30px;
+    color: #303243;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .main-heading p {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .answers {
+    padding: 30px 20px 40px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    background: #dde4ff;
+    color: rgb(40, 37, 53);
+    border-radius: 0 0 5px 5px;
+  }
+
+  body.dark .answers {
+    color: rgb(40, 37, 53);
+  }

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import MenuOverlay from "./MenuOverlay";
 import { FaXmark } from "react-icons/fa6";
@@ -43,12 +43,34 @@ function Header() {
     setThemes((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
+  const toggleBodyScroll = ()=>{
+    const styles = {
+      position:"fixed",
+      maxWidth:"100vw",
+      overflow: "hidden"
+    }
+    
+    if(document.body.style.position===""){
+      for(const i in styles){
+        document.body.style[i] = styles[i]
+      }
+      return
+    }
+
+    for(const i in styles){
+      document.body.style[i] = ""
+    }
+  }
+
+
   return (
     <div className="app-header">
       <div className="flex justify-between md:justify-evenly sticky top-0 z-[999] backdrop-blur-sm items-center py-[1.5rem] px-4 md:px-10 ">
         <div className="hover:scale-105 duration-100 ease-in-out">
           <Link to="/">
-            <img width={70} src="/assets/icon.png" alt="Logo" />
+
+            <img width={70} src="\assets\icon.webp" alt="Logo" />
+
           </Link>
         </div>
         <div className="md:mx-10 lg:mx-4">
@@ -65,7 +87,7 @@ function Header() {
                       theme === "dark" ? "text-white" : "text-gray-800"
                     } ${
                       isActive
-                        ? "underline decoration-green-500 underline-offset-[0.5rem] decoration-2"
+                        ? "text-green-500 border-b-2 border-green-500"
                         : ""
                     } hover:text-green-500 flex items-center`
                   }
@@ -84,6 +106,7 @@ function Header() {
               alt="x-mark"
               className="w-[30px] h-[30px] text-[#DC2626]"
               onClick={() => {
+                toggleBodyScroll();
                 setIsNavBarOpen(!isNavBarOpen);
               }}
             />
@@ -92,6 +115,7 @@ function Header() {
               id="hamburger"
               className="ri-menu-line w-[30px] h-[30px] text-[#DC2626]"
               onClick={() => {
+                toggleBodyScroll();
                 setIsNavBarOpen(!isNavBarOpen);
               }}
             ></i>
@@ -125,6 +149,7 @@ function Header() {
           links={navLinks}
           setIsNavBarOpen={setIsNavBarOpen}
           theme={[theme, handleThemeChange]}
+          toggleBodyScroll={toggleBodyScroll}
         />
       )}
     </div>
