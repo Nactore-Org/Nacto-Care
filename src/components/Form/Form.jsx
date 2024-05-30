@@ -17,7 +17,7 @@ function Form() {
                 Select Medical Need
               </label>
               <select
-                class="appearance-none  block w-full bg-gray-200 dark:text-white dark:bg-gray-700 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                class="appearance-none  block w-full bg-gray-200 dark:text-white dark:bg-gray-700 text-gray-700 border dark:border-[#333333] rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                 id="grid-first-name"
                 type="text"
                 placeholder="Jane"
@@ -42,7 +42,7 @@ function Form() {
                 Select your city
               </label>
               <select
-                class="appearance-none block w-full bg-gray-200 dark:text-white dark:bg-gray-700 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                class="appearance-none block w-full bg-gray-200 dark:text-white dark:bg-gray-700 text-gray-700 border dark:border-[#333333] rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                 id="grid-first-name"
                 type="text"
                 placeholder="Jane"
@@ -65,7 +65,7 @@ function Form() {
                 Choose Date
               </label>
               <input
-                class="block appearance-none w-full bg-gray-200 dark:text-white dark:bg-gray-700 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                class="block appearance-none w-full bg-gray-200 dark:text-white dark:bg-gray-700 border dark:border-[#333333] border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-state"
                 type="date"
               />
@@ -79,7 +79,7 @@ function Form() {
               </label>
               <div class="relative">
                 <input
-                  class="block appearance-none w-full bg-gray-200 dark:text-white dark:bg-gray-700 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  class="block appearance-none w-full bg-gray-200 dark:text-white dark:bg-gray-700 border dark:border-[#333333] border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-state"
                   type="time"
                 />
