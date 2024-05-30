@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 function Footer() {
   return (
@@ -42,12 +44,12 @@ function Footer() {
                 <ul className="text-gray-500  font-medium">
                   <li className="mb-4">
                     <a href="https://www.linkedin.com/company/nactore-organization/about/" className="hover:underline">
-                      Linkedin
+                      <FontAwesomeIcon icon={faLinkedin} style={{ color: '#0077b5' }}/>
                     </a>
                   </li>
                   <li className="mb-4">
                     <a href="https://github.com/Nactore-Org/Nacto-Care" className="hover:underline">
-                      GitHub
+                      <FontAwesomeIcon icon={faGithub} style={{ color: '#24292e' }} />
                     </a>
                   </li>
                   <li className="mb-4">
