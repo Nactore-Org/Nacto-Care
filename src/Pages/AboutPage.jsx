@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import nurse from '../../public/assets/booknurse.png'
-import nursehover from '../../public/assets/booknursehover.png'
-import anywhere from '../../public/assets/anywhere.png'
-import anywherehover from '../../public/assets/anywherehover.png'
-import anytime from '../../public/assets/anytime.png'
-import anytimehover from '../../public/assets/anytimehover.png'
-import career from '../../public/assets/nursecareer.png'
-import careerhover from '../../public/assets/nursecareerhover.png'
+import nurse from '../../public/assets/booknurse.webp'
+import nursehover from '../../public/assets/booknursehover.webp'
+import anywhere from '../../public/assets/anywhere.webp'
+import anywherehover from '../../public/assets/anywherehover.webp'
+import anytime from '../../public/assets/anytime.webp'
+import anytimehover from '../../public/assets/anytimehover.webp'
+import career from '../../public/assets/nursecareer.webp'
+import careerhover from '../../public/assets/nursecareerhover.webp'
 import BackBtn from "../components/BackBtn/BackBtn";
-import ourstory from '../../public/assets/ourstory.jpg'
+import ourstory from '../../public/assets/ourstory.webp'
 import "../styles/AboutPage.css"
 
 const AboutPage = () => {
@@ -39,7 +39,7 @@ const AboutPage = () => {
             </p>
           </div>
           <div className="">
-            <img src="/assets/group.png" width={400} height={400} alt="group" className="w-full lg:w-[35vw] rounded-xl" />
+            <img src="/assets/group.webp" width={400} height={400} alt="group" className="w-full lg:w-[35vw] rounded-xl" />
           </div>
         </div>
 

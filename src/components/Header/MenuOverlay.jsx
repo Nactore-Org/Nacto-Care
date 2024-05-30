@@ -2,9 +2,10 @@ import React from "react"; // Importing React to use JSX syntax
 import PropTypes from "prop-types"; // Importing PropTypes for type-checking
 import { Link, NavLink } from "react-router-dom"; // Importing Link and NavLink for navigation
 
-const MenuOverlay = ({ links, setIsNavBarOpen, theme:[theme, handleThemeChange] }) => {
+const MenuOverlay = ({ links, setIsNavBarOpen, theme:[theme, handleThemeChange], toggleBodyScroll}) => {
   // Function to handle click event, which closes the navigation bar
   const handleClick = () => {
+    toggleBodyScroll();
     setIsNavBarOpen(false);
   };
 
@@ -38,7 +39,7 @@ const MenuOverlay = ({ links, setIsNavBarOpen, theme:[theme, handleThemeChange] 
       {/* Login button */}
       <li>
         <button 
-          className="bg-green-600 hover:scale-105 hover:shadow-lg hover:shadow-green-300 transition-all text-white px-[1.8rem] font-medium py-[0.5rem] rounded-sm shadow-lg shadow-green-200"
+          className="bg-green-600 hover:scale-105 hover:shadow-lg hover:shadow-green-300 transition-all text-white px-[1.8rem] font-medium py-[0.5rem] rounded-sm shadow-lg shadow-black"
           onClick={handleClick} // Added onClick to close the menu
         >
           <Link to="/login">Login</Link> {/* Link to the login page */}
@@ -47,7 +48,7 @@ const MenuOverlay = ({ links, setIsNavBarOpen, theme:[theme, handleThemeChange] 
       {/* Signup button */}
       <li>
         <button 
-          className="bg-green-600 hover:scale-105 hover:shadow-lg hover:shadow-green-300 transition-all text-white px-[1.8rem] font-medium py-[0.5rem] rounded-sm shadow-lg shadow-green-200"
+          className="bg-green-600 hover:scale-105 hover:shadow-lg hover:shadow-green-300 transition-all text-white px-[1.8rem] font-medium py-[0.5rem] rounded-sm shadow-lg shadow-black"
           onClick={handleClick} // Added onClick to close the menu
         >
           <Link to="signup">Signup</Link> {/* Link to the signup page */}
