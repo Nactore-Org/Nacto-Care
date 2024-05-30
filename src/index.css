@@ -53,6 +53,35 @@ body.dark .blog {
   color: white;
 }
 
+.close-animation{
+  overflow: hidden;
+  animation: close both 0.8s ;
+  }
+  
+  @keyframes close {
+    from{
+      height:calc(100vh - 7.375rem)
+      
+    }to{
+      height: 0px;
+    }
+    
+  }
+
+.open-animation{
+overflow: hidden;
+animation: open both 0.8s ;
+}
+
+@keyframes open {
+  from{
+    height: 0px;
+    
+  }to{
+    height:calc(100vh - 7.375rem)
+  }
+  
+}
 body.dark .contact {
   background-color: black;
   color: white;
