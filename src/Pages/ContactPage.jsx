@@ -75,7 +75,7 @@ function ContactPage() {
               </div>
               <button
                 type="submit"
-                className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg sm:w-fit bg-green-600 focus:ring-4 focus:outline-none focus:ring-primary-300"
+                className="py-3 px-5 hover:scale-105 hover:shadow-lg hover:shadow-green-300 transition-all text-sm font-medium text-center text-white rounded-lg sm:w-fit bg-green-600 focus:ring-4 focus:outline-none focus:ring-primary-300"
               >
                 Send message
               </button>
