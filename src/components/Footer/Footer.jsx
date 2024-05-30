@@ -91,7 +91,7 @@ function Footer() {
               </div>
             </div>
             <div className="px-4 py-4 flex items-center justify-center">
-              © 2024 Nactore Organization, Building for democracy with care
+              © {new Date().getFullYear().toString()} Nactore Organization, Building for democracy with care
             </div>
           </div>
         </footer>
