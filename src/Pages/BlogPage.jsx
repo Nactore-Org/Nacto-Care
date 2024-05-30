@@ -83,7 +83,7 @@ const BlogPage = () => {
             <div class="container mx-auto px-4 py-8 w-full">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-[80%] mx-auto">
                     {blogs.map((blog) => {
-                        return <Link to={`/blog/${blog.id}/`}>
+                        return <Link className='blog-card' to={`/blog/${blog.id}/`}>
                             <div class="bg-white shadow-md rounded-lg overflow-hidden">
                                 <img className="w-full h-52 object-cover" src="https://imgs.search.brave.com/q3MJLK_ILOJjNNpDQfAoodURIpLLbhskPAuceu6vI6c/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM0/OTE4MzAxMy9waG90/by9hZnJpY2FuLW1h/bGUtam91cm5hbGlz/dC1wcmVwYXJpbmct/cXVlc3Rpb25zLWZv/ci1wcmVzcy1jb25m/ZXJlbmNlLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1xaWRi/U3pfNmhwa2tyNmpS/QjUtMWhTTUsxSjZL/RUM2YXZJVkJsYXht/WmdvPQ" alt="Blog Image" />
                                 <div class="p-4 flex flex-col gap-1 blog-text">
