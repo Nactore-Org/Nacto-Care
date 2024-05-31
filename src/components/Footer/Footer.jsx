@@ -24,7 +24,7 @@ function Footer() {
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="/ourbrand" className="hover:underline">
                       Brand Center
                     </a>
                   </li>
@@ -55,6 +55,11 @@ function Footer() {
                       Contact Us
                     </a>
                   </li>
+                  <li className="mb-4">
+                    <a href="/faq" className="hover:underline">
+                      FAQ
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div>
@@ -75,6 +80,11 @@ function Footer() {
                   <li className="mb-4">
                     <a href="/termsandconditions" className="hover:underline">
                       Terms &amp; Conditions
+                    </a>
+                  </li>
+                  <li className="mb-4">
+                    <a href="/guidelines" className="hover:underline">
+                      Brand Guidelines
                     </a>
                   </li>
                 </ul>

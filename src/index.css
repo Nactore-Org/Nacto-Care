@@ -20,6 +20,9 @@
 
 .app-header {
   background-color: #c6dcff;
+  position: sticky;
+  top: 0;
+  z-index: 99;
 }
 
 body.light {
@@ -42,27 +45,57 @@ body.dark .footer {
 }
 
 body.dark .footer-heading {
-  color: white
+  color: white;
 }
 
 body.dark .blog {
   background-color: black;
-  color: white
+  color: white;
 }
 
+.close-animation{
+  overflow: hidden;
+  animation: close both 0.8s ;
+  }
+  
+  @keyframes close {
+    from{
+      height:calc(100vh - 7.375rem)
+      
+    }to{
+      height: 0px;
+    }
+    
+  }
+
+.open-animation{
+overflow: hidden;
+animation: open both 0.8s ;
+}
+
+@keyframes open {
+  from{
+    height: 0px;
+    
+  }to{
+    height:calc(100vh - 7.375rem)
+  }
+  
+}
 body.dark .contact {
   background-color: black;
-  color: white
+  color: white;
 }
 
 body.dark .blog-text {
   background-color: rgb(192, 192, 192);
-  color: white
+  color: white;
 }
 
-body.dark .login , .signup {
+body.dark .login,
+.signup {
   background-color: #121212;
-  color: white
+  color: white;
 }
 
 /* Add light mode styles for signup */
@@ -75,10 +108,50 @@ body.dark .contact-para {
   color: white;
 }
 
+body.dark p, li {
+  color: white;
+}
+
+body.dark .guideline-subheading {
+  color: #d3d3d3;
+}
+
+body.light li {
+  color: #333;
+}
+
 body.dark .privacy {
   color: rgb(211, 211, 211);
 }
 
 .nav-link-active {
   @apply underline decoration-green-500 underline-offset-2 decoration-2;
+}
+/* Add this to your index.css or equivalent CSS file */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #38a169; /* Change color as needed */
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.scroll-to-top-btn:hover {
+  background-color: #2f855a; /* Darken on hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+}
+
+.scroll-to-top-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(66, 153, 225, 0.5); /* Focus ring */
 }

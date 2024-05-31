@@ -1,0 +1,18 @@
+.link {
+    transition: color 0.3s ease;
+  }
+  
+  .link:hover {
+    color: #5a0dd5;
+  }
+
+  .image-container {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-container:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  

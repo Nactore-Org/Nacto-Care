@@ -15,7 +15,7 @@ function CareersPage() {
       </div>
       <div className="m-auto flex flex-col items-center">
         <div className="m-auto object-contain my-0 px-12 sm:px-14 md:px-20 smd:px-14">
-          <img width={1000} src="\assets\careers.png" alt="careers" />
+          <img width={1000} src="\assets\careers.webp" alt="careers" />
         </div>
         <div className=" text-center smd:text-left smd:flex justify-between m-auto px-7 py-6 gap-11 mt-8 mb-5 ">
           <div className="sm:px-[4vw]">
@@ -42,7 +42,7 @@ function CareersPage() {
             <div className="flex flex-col gap-3  items-center smd:gap-5 smd:flex smd:flex-row max-w-[70ch] mb-4">
               <div>
                 <img
-                  src="\assets\empowering.png"
+                  src="\assets\empowering.webp"
                   height={100}
                   width={100}
                   alt=""
@@ -61,7 +61,7 @@ function CareersPage() {
             </div>
             <div className="flex flex-col  gap-3 items-center  smd:gap-5 smd:flex smd:flex-row max-w-[70ch] mb-4">
               <div>
-                <img src="\assets\time.png" height={100} width={100} alt="" className="w-[5rem] sm:w-[4rem] smd:w-[7rem] lg:w-[6rem] xl:w-[5rem]" />
+                <img src="\assets\times.webp" height={100} width={100} alt="" className="w-[5rem] sm:w-[4rem] smd:w-[7rem] lg:w-[6rem] xl:w-[5rem]" />
               </div>
               <div className="max-w-[70ch] mb-3">
                 <h2 className="text-zinc-700 font-bold text-xl sm:mb-2 smd:mb-0">
@@ -76,7 +76,7 @@ function CareersPage() {
             </div>
             <div className=" flex flex-col gap-3  items-center smd:gap-5  smd:flex  smd:flex-row max-w-[70ch] mb-4">
               <div>
-                <img src="\assets\goal.png" height={100} width={100} className="w-[5rem] sm:w-[4rem] smd:w-[7rem] lg:w-[6rem] xl:w-[5rem]" />
+                <img src="\assets\up.webp" height={100} width={100} className="w-[5rem] sm:w-[4rem] smd:w-[7rem] lg:w-[6rem] xl:w-[5rem]" />
               </div>
               <div className="max-w-[70ch] mb-3">
                 <h2 className="text-zinc-700 font-bold text-xl sm:mb-2 smd:mb-0">

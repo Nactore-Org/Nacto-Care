@@ -7,17 +7,17 @@ const Licensing = () => {
   return (
 
     <>
-    <div className="py-8 mb-5 w-[50vw] justify-start ml-auto mr-auto mt-10">
-    <div>
-      <BackBtn Page={"Licensing"} />
-      <LicenseWrapper className='privacy'>
-            <section>
+      <div className="py-8 mb-5 sm:w-[90vw] justify-start ml-auto mr-auto mt-10">
+        <div className='text-center'>
+          <BackBtn Page={"Licensing"} />
+          <LicenseWrapper className='privacy'>
+            <section className='text-left'>
               <p>Last updated: May 17, 2024</p>
               <p>
                 Welcome to NactoCare. This Licensing Agreement governs your access and use of our software, content, and services. By accessing or using any part of our services, you agree to comply with and be bound by the terms outlined in this agreement.
               </p>
             </section>
-            <section>
+            <section className='text-left'>
               <h2>GNU General Public License v3.0</h2>
               <p>
                 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
@@ -29,7 +29,7 @@ const Licensing = () => {
                 You should have received a copy of the GNU General Public License along with this program. If not, see <a href="https://www.gnu.org/licenses/" target="_blank" rel="noopener noreferrer">https://www.gnu.org/licenses/</a>.
               </p>
             </section>
-            <section>
+            <section className='text-left'>
               <h2>Permissions</h2>
               <ul>
                 <li>Use: You are free to use the software for any purpose.</li>
@@ -38,7 +38,7 @@ const Licensing = () => {
                 <li>Modify: You can distribute copies of your modified versions to others.</li>
               </ul>
             </section>
-            <section>
+            <section className='text-left'>
               <h2>Conditions</h2>
               <ul>
                 <li>
@@ -52,18 +52,18 @@ const Licensing = () => {
                 </li>
               </ul>
             </section>
-            <section>
+            <section className='text-left'>
               <h2>Contact Information</h2>
               <p>
                 If you have any questions or concerns about this Licensing Agreement, please contact us at:
-                  Email: <a href="mailto:nactoreorganization@gmail.com">nactoreorganization@gmail.com</a>
+                Email: <a href="mailto:nactoreorganization@gmail.com">nactoreorganization@gmail.com</a>
               </p>
-            
+
             </section>
           </LicenseWrapper>
-    </div>
-  </div>
-    
+        </div>
+      </div>
+
     </>
   );
 };
