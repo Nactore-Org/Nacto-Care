@@ -25,6 +25,7 @@ import BrandCenter from "./Pages/BrandCenter.jsx";
 import ScrollToTopButton from "./ScrollToTopButton"; // Import ScrollToTopButton
 import Guidelines from "./Pages/Guidelines.jsx";
 import Faq from "./Pages/Faq.jsx";
+import FeedbackPage from "./Pages/FeedbackForm.jsx"; // Import FeedbackPage
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -44,6 +45,7 @@ const router = createBrowserRouter(
       <Route path="licensing" element={<Licensing />} />
       <Route path="termsandconditions" element={<TermsAndConditions />} />
       <Route path="faq" element={<Faq/>}/>
+      <Route path="feedback" element={<FeedbackPage />} /> {/* Feedback route */}
     </Route>
   )
 );

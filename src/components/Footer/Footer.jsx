@@ -60,6 +60,11 @@ function Footer() {
                       FAQ
                     </a>
                   </li>
+                  <li className="mb-4">
+                    <a href="/feedback" className="hover:underline">
+                      Help Us Improve!
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div>
