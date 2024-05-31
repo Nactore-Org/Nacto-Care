@@ -1,7 +1,7 @@
 from uuid import uuid4
 from jose import jwt,JWTError
 from fastapi import Form
-from fastapi.security import OAuth2PasswordBearer
+from fastapi.security import OAuth2PasswordBearer,OAuth2PasswordRequestForm
 from passlib.context import CryptContext
 from models import Patient
 from database import SessionLocal
@@ -37,7 +37,7 @@ ALGORITHM = 'HS256'
 
 
 bcrypt_context = CryptContext(schemes=['bcrypt'], deprecated='auto')
-oauth2_bearer = OAuth2PasswordBearer(tokenUrl='auth/token')
+oauth2_bearer = OAuth2PasswordBearer(tokenUrl='auth/login')
 
 
 # Models for validation
@@ -126,9 +126,9 @@ async def create_user(db: db_dependency,
 
 # Route to create access token for a patient
 @auth_router.post("/login", response_model=Token)
-async def login_for_access_token(form_data: Annotated[OAuth2EmailRequestForm, Depends()],
+async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm, Depends()],
                                  db: db_dependency):
-    user = authenticate_patient(form_data.email, form_data.password, db)
+    user = authenticate_patient(form_data.username, form_data.password, db)
     if not user:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,
                             detail='Could not validate user.')
