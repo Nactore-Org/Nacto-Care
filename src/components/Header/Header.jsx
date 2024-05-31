@@ -44,7 +44,7 @@ function Header() {
       <div className="flex justify-between md:justify-evenly sticky top-0 z-[999] backdrop-blur-sm items-center py-[1.5rem] px-4 md:px-10 ">
         <div className="hover:scale-105 duration-100 ease-in-out">
           <Link to="/">
-            <img width={220} src="public/assets/Nacto-Care-Logo/Nacto-CARE LOGO No BG.svg" alt="Logo" />
+            <img width={260} src="public/assets/Nacto-Care-Logo/Nacto-CARE LOGO No BG.svg" alt="Logo" />
           </Link>
         </div>
         <div>
