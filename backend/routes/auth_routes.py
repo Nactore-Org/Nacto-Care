@@ -12,6 +12,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from typing import Annotated
 from datetime import timedelta, datetime,date
 from enum import Enum
+from utils import verify_recaptcha
 
 
 class CityChoice(str,Enum):
@@ -105,6 +106,12 @@ async def get_current_patient(token: Annotated[str, Depends(oauth2_bearer)]):
 @auth_router.post("/signup", status_code=status.HTTP_201_CREATED)
 async def create_user(db: db_dependency,
                       create_patient_request: CreatePatientRequest):
+    
+    is_human = await verify_recaptcha(create_patient_request.recaptcha_token)
+    if not is_human:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,
+                            detail='Recaptcha verification failed.')
+    
     patient_id = str(uuid4())
     current_time = datetime.utcnow()
     create_user_model = Patient(
@@ -128,6 +135,12 @@ async def create_user(db: db_dependency,
 @auth_router.post("/login", response_model=Token)
 async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm, Depends()],
                                  db: db_dependency):
+    
+    recaptcha_token = form_data.__dict__.get('recaptcha_token')
+    if not recaptcha_token or not await verify_recaptcha(recaptcha_token):
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,
+                            detail='Recaptcha verification failed.')
+    
     user = authenticate_patient(form_data.username, form_data.password, db)
     if not user:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,

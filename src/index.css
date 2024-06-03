@@ -53,6 +53,10 @@ body.dark .blog {
   color: white;
 }
 
+.grecaptcha-badge {
+  bottom: 698px !important;
+}
+
 .close-animation{
   overflow: hidden;
   animation: close both 0.8s ;
