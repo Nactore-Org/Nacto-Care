@@ -44,14 +44,16 @@ function Footer() {
                 <ul className="text-gray-500  font-medium">
                   <li className="mb-4">
                     <a href="https://www.linkedin.com/company/nactore-organization/about/" className="hover:underline" target="_blank">
+                    <FontAwesomeIcon icon={faLinkedin} style={{ color: '#0077b5', paddingRight: '10px'  }}/>
                       Linkedin
-                      <FontAwesomeIcon icon={faLinkedin} style={{ color: '#0077b5', paddingLeft: '10px'  }}/>
+                      
                     </a>
                   </li>
                   <li className="mb-4">
                     <a href="https://github.com/Nactore-Org/Nacto-Care" className="hover:underline" target="_blank">
+                    <FontAwesomeIcon icon={faGithub} style={{ color: '#24292e', paddingRight: '10px'  }} />
                       GitHub
-                      <FontAwesomeIcon icon={faGithub} style={{ color: '#24292e', paddingLeft: '10px'  }} />
+                      
                     </a>
                   </li>
                   <li className="mb-4">
