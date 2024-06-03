@@ -59,7 +59,7 @@ function LandingPage() {
             />
           </div>
         </div>
-        <div className="mx-14 mt-11 flex justify-center basis-[16rem] sm:mx-24">
+        <div className="lg:mx-14 mx-4 md:mx-10 lg:mt-11 flex justify-center basis-[16rem] ">
           <Form />
         </div>
 
@@ -170,9 +170,6 @@ function LandingPage() {
                   <img
 
                     src="/assets/health-professional.png"
-
-                    src="\assets\health-professional.webp"
-
                     height={100}
                     width={100}
                     alt=""
