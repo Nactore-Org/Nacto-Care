@@ -11,7 +11,7 @@ const MenuOverlay = ({ links, setIsNavBarOpen, theme:[theme, handleThemeChange],
 
   return (
     // ul element to contain the menu links
-    <ul className="absolute md:hidden w-screen items-center text-center z-20 app-header h-[calc(100vh-7.375rem)] flex flex-col justify-evenly">
+    <ul className="absolute md:hidden w-screen items-center text-center z-20 app-header h-[calc(100vh-7.375rem)] flex flex-col justify-evenly" dataLenisPrevent="true">
       {/* Mapping over the links array to create each link item */}
       {links.map((link, index) => (
         <li key={index}>
