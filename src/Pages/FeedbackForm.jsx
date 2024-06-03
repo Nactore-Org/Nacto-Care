@@ -7,6 +7,7 @@ function FeedbackPage() {
   const [rating, setRating] = useState(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [feedback, setFeedback] = useState("");
 
   const handleRatingChange = (value) => {
     setRating(value);
@@ -20,9 +21,21 @@ function FeedbackPage() {
     setEmail(e.target.value);
   };
 
+  const handleFeedbackChange = (e) => {
+    setFeedback(e.target.value);
+  };
+
+  const handleRedirect = () => {
+    const subject = encodeURIComponent("Feedback and Suggestions for Improvement");
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nRating: ${rating}\nFeedback: ${feedback}`
+    );
+    window.location.href = `mailto:nactoreorganization@gmail.com?subject=${subject}&body=${body}`;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
+    handleRedirect();
   };
 
   return (
@@ -110,6 +123,8 @@ function FeedbackPage() {
           <textarea
             id="feedback"
             rows="6"
+            value={feedback}
+            onChange={handleFeedbackChange}
             className="block w-full text-lg text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-700 rounded-lg shadow-sm border border-gray-300 dark:border-gray-600 focus:ring-primary-500 focus:border-primary-500 p-4 mb-4"
             placeholder="Let us know how we can improve..."
             required
