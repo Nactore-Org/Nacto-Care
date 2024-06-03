@@ -87,9 +87,10 @@ const BlogPage = () => {
     },
     // Add more blog objects as needed
   ]);
+
+  /* Grouping blogs by tags and handling tab clicks. */
     const blogsGroupedByTags = Object.groupBy(blogs, ({tag})=> tag)
     const handleTabClick = (e)=>{
-      console.log(e.target.id)
         const previousActiveButton= document.querySelector(`#${activeTab + "Tab"}`)
         const previousActiveContainer = document.querySelector(`#${activeTab + "TabContainer"}`)
         const activeContainer = document.querySelector(`#${e.target.id + "Container"}`)
@@ -107,28 +108,32 @@ const BlogPage = () => {
     }
     return (
         <>
-           <div className="grid grid-cols-3 lg:w-1/2 xl:w-1/4 md:w-2/3  w-5/6 mx-auto align-items-center  justify-items-center">
+        {/* Tabs Container */}
+          <div className="grid grid-cols-3 lg:w-1/2 xl:w-1/4 md:w-2/3  w-5/6 mx-auto align-items-center  justify-items-center">
+            {/* Top blgs tab */}
             <div id="topTabContainer" className="border-b-2 w-full text-center transition-border duration-300">
                 <button id="topTab" className="relative p-0 m-0 border-0 bg-transparent w-full h-full text-gray-600" onClick={(e)=>handleTabClick(e)}>
                   <h1 className="sticky top-0 left-0 z-[-1] text-2xl font-bold mb-4 mt-10 text-center transition-color duration-300">Top</h1>
                 </button>
             </div>
+            {/* Trending blogs tab */}
             <div id="trendingTabContainer" className="border-b-2 w-full text-center transition-border duration-300">
                 <button id="trendingTab" className="relative p-0 m-0 border-0 bg-transparent w-full h-full relative z-1 text-gray-600" onClick={(e)=>handleTabClick(e)}>
                   <h1 className="sticky top-0 left-0 z-[-1] text-2xl font-bold mb-4 mt-10 text-center transition-color duration-300">Trending</h1>
                 </button>
             </div>
+            {/* Latest blogs tab */}
             <div id="latestTabContainer" className="border-b-2 w-full border-black text-center transition-border duration-300">
                 <button id="latestTab" className="relative p-0 m-0 border-0 bg-transparent w-full h-full" onClick={(e)=>handleTabClick(e)}>
                   <h1 className="sticky top-0 left-0 w-full z-[-1] text-2xl font-bold mb-4 mt-10 text-center transition-color duration-300">Latest</h1>
                 </button>
             </div>
-            </div> 
-            <div class="container mx-auto px-4 py-8 w-full">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-[80%] mx-auto">
-                    {blogsGroupedByTags[activeTab].map((blog)=> <SingleBlog blog={blog}/>)}
-                </div>
-            </div>
+          </div> 
+          <div class="container mx-auto px-4 py-8 w-full">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-[80%] mx-auto">
+                  {blogsGroupedByTags[activeTab].map((blog)=> <SingleBlog blog={blog}/>)}
+              </div>
+          </div>
         </>
     )
 }
