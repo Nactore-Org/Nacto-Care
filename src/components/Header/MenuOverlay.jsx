@@ -1,4 +1,4 @@
-import React from "react"; // Importing React to use JSX syntax
+import React, { useState } from "react"; // Importing React to use JSX syntax
 import PropTypes from "prop-types"; // Importing PropTypes for type-checking
 import { Link, NavLink } from "react-router-dom"; // Importing Link and NavLink for navigation
 
@@ -7,11 +7,12 @@ const MenuOverlay = ({ links, setIsNavBarOpen, theme:[theme, handleThemeChange],
   const handleClick = () => {
     toggleBodyScroll();
     setIsNavBarOpen(false);
+    setClosingAnimation(true)
   };
 
   return (
     // ul element to contain the menu links
-    <ul className="absolute md:hidden w-screen items-center text-center z-20 app-header h-[calc(100vh-7.375rem)] flex flex-col justify-evenly" dataLenisPrevent="true">
+    <ul className="absolute md:hidden w-screen items-center text-center z-20 app-header open-animation flex flex-col justify-evenly">
       {/* Mapping over the links array to create each link item */}
       {links.map((link, index) => (
         <li key={index}>

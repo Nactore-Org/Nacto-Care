@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import MenuOverlay from "./MenuOverlay";
 import { FaXmark } from "react-icons/fa6";
 import "../../index.css";
@@ -9,27 +9,27 @@ const navLinks = [
   {
     title: "Home",
     to: "/",
-    icon: "ri-home-fill"// Added icon property
+    icon: "ri-home-fill", // Added icon property
   },
   {
     title: "Careers",
     to: "/careers",
-    icon: "ri-focus-2-fill"
+    icon: "ri-focus-2-fill",
   },
   {
     title: "Blog",
     to: "/blog",
-    icon: "ri-newspaper-fill"
+    icon: "ri-newspaper-fill",
   },
   {
     title: "Contact",
     to: "/contact",
-    icon: "ri-customer-service-2-fill"
+    icon: "ri-customer-service-2-fill",
   },
   {
     title: "About",
     to: "/about",
-    icon: "ri-nurse-fill"
+    icon: "ri-nurse-fill",
   },
 ];
 
@@ -37,40 +37,42 @@ function Header() {
   const [isNavBarOpen, setIsNavBarOpen] = useState(false);
   const { theme, toggleTheme } = useContext(ThemeContext);
   const [themes, setThemes] = useState("light");
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   const handleThemeChange = () => {
     toggleTheme();
     setThemes((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
-  const toggleBodyScroll = ()=>{
+  const toggleBodyScroll = () => {
     const styles = {
-      position:"fixed",
-      maxWidth:"100vw",
-      overflow: "hidden"
-    }
-    
-    if(document.body.style.position===""){
-      for(const i in styles){
-        document.body.style[i] = styles[i]
+      position: "fixed",
+      maxWidth: "100vw",
+      overflow: "hidden",
+    };
+
+    if (document.body.style.position === "") {
+      for (const i in styles) {
+        document.body.style[i] = styles[i];
       }
-      return
+      return;
     }
 
-    for(const i in styles){
-      document.body.style[i] = ""
+    for (const i in styles) {
+      document.body.style[i] = "";
     }
-  }
-
+  };
 
   return (
     <div className="app-header">
       <div className="flex justify-between md:justify-evenly sticky top-0 z-[999] backdrop-blur-sm items-center py-[1.5rem] px-4 md:px-10 ">
         <div className="hover:scale-105 duration-100 ease-in-out w-1/5">
           <Link to="/">
-
             <img width={70} src="\assets\icon.webp" alt="Logo" />
-
           </Link>
         </div>
         <div className="md:mx-10 lg:mx-4">

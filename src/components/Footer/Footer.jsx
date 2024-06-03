@@ -41,12 +41,12 @@ function Footer() {
                 </h2>
                 <ul className="text-gray-500  font-medium">
                   <li className="mb-4">
-                    <a href="https://www.linkedin.com/company/nactore-organization/about/" className="hover:underline">
+                    <a href="https://www.linkedin.com/company/nactore-organization/about/" className="hover:underline" target="_blank">
                       Linkedin
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="https://github.com/Nactore-Org/Nacto-Care" className="hover:underline">
+                    <a href="https://github.com/Nactore-Org/Nacto-Care" className="hover:underline" target="_blank">
                       GitHub
                     </a>
                   </li>
@@ -91,7 +91,7 @@ function Footer() {
               </div>
             </div>
             <div className="px-4 py-4 flex items-center justify-center">
-              © 2024 Nactore Organization, Building for democracy with care
+              © {new Date().getFullYear().toString()} Nactore Organization, Building for democracy with care
             </div>
           </div>
         </footer>
