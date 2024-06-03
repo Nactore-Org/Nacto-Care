@@ -3,7 +3,7 @@ import React from "react";
 function Form() {
   return (
     <>
-      <div className="bg-white rounded-xl w-[70rem] p-6 drop-shadow-xl outline-1 outline-green-300 outline">
+      <div className="bg-white dark:bg-[#333333] rounded-xl w-[70rem] p-6 drop-shadow-xl outline-1 outline-green-300 outline">
         <form class="w-full  m-auto">
           <div className="mb-6 px-3 font-bold text-2xl">
             <h2>Find your Home Care Taker</h2>
@@ -11,13 +11,13 @@ function Form() {
           <div class="flex flex-1 flex-wrap  mb-6">
             <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
               <label
-                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                class="block uppercase tracking-wide text-gray-700 dark:text-white text text-xs font-bold mb-2"
                 for="grid-first-name"
               >
                 Select Medical Need
               </label>
               <select
-                class="appearance-none  block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                class="appearance-none  block w-full bg-gray-200 dark:text-white dark:bg-gray-700 text-gray-700 border dark:border-[#333333] rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                 id="grid-first-name"
                 type="text"
                 placeholder="Jane"
@@ -36,13 +36,13 @@ function Form() {
             </div>
             <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
               <label
-                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                class="block uppercase tracking-wide dark:text-white text-gray-700 text-xs font-bold mb-2"
                 for="grid-first-name"
               >
                 Select your city
               </label>
               <select
-                class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                class="appearance-none block w-full bg-gray-200 dark:text-white dark:bg-gray-700 text-gray-700 border dark:border-[#333333] rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                 id="grid-first-name"
                 type="text"
                 placeholder="Jane"
@@ -59,27 +59,27 @@ function Form() {
           <div class="flex  flex-1 flex-wrap  mb-2">
             <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
               <label
-                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                class="block uppercase tracking-wide text-gray-700 dark:text-white text-xs font-bold mb-2"
                 for="grid-city"
               >
                 Choose Date
               </label>
               <input
-                class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                class="block appearance-none w-full bg-gray-200 dark:text-white dark:bg-gray-700 border dark:border-[#333333] border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-state"
                 type="date"
               />
             </div>
             <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
               <label
-                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                class="block uppercase tracking-wide text-gray-700 dark:text-white text-xs font-bold mb-2"
                 for="grid-state"
               >
                 Choose Time
               </label>
               <div class="relative">
                 <input
-                  class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  class="block appearance-none w-full bg-gray-200 dark:text-white dark:bg-gray-700 border dark:border-[#333333] border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-state"
                   type="time"
                 />
