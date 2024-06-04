@@ -50,6 +50,7 @@ class CreatePatientRequest(BaseModel):
     patient_phone_number:str
     patient_address:str
     patient_city:CityChoice = Field(default=CityChoice.DELHI)
+    recaptcha_token: str
 
 
 class Token(BaseModel):
@@ -131,12 +132,16 @@ async def create_user(db: db_dependency,
     db.commit()
 
 
+# Extending OAuth2PasswordRequestForm to include recaptcha_token
+class OAuth2PasswordRequestFormRecaptcha(OAuth2PasswordRequestForm):
+    recaptcha_token: str = Form(...)
+
 # Route to create access token for a patient
 @auth_router.post("/login", response_model=Token)
 async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm, Depends()],
                                  db: db_dependency):
     
-    recaptcha_token = form_data.__dict__.get('recaptcha_token')
+    recaptcha_token = form_data.recaptcha_token
     if not recaptcha_token or not await verify_recaptcha(recaptcha_token):
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,
                             detail='Recaptcha verification failed.')
