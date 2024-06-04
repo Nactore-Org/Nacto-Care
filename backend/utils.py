@@ -10,4 +10,7 @@ async def verify_recaptcha(token: str) -> bool:
     async with httpx.AsyncClient() as client:
         response = await client.post(url, data=payload)
         result = response.json()
-        return result.get("success", False)
+
+        score = result.get("score", 0)
+        threshold = 0.5
+        return score >= threshold and result.get("success", False)

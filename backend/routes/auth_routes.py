@@ -138,7 +138,7 @@ class OAuth2PasswordRequestFormRecaptcha(OAuth2PasswordRequestForm):
 
 # Route to create access token for a patient
 @auth_router.post("/login", response_model=Token)
-async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm, Depends()],
+async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestFormRecaptcha, Depends()],
                                  db: db_dependency):
     
     recaptcha_token = form_data.recaptcha_token
