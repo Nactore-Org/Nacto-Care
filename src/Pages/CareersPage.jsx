@@ -1,6 +1,7 @@
 import React from "react";
 import BackBtn from "../components/BackBtn/BackBtn";
 import { Link } from "react-router-dom";
+import {motion} from "framer-motion";
 
 function CareersPage() {
   const handleRedirect = () => {
@@ -9,39 +10,47 @@ function CareersPage() {
   return (
     <>
       <div className="py-8 mb-5 flex w-[50vw] justify-start ml-auto mr-auto mt-10">
-        <div>
+        <motion.div initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }} transition={{duration:2}} >
           <BackBtn Page={"Careers"} />
-        </div>
+        </motion.div>
       </div>
       <div className="m-auto flex flex-col items-center">
         <div className="m-auto object-contain my-0 px-12 sm:px-14 md:px-20 smd:px-14">
-          <img width={1000} src="\assets\careers.webp" alt="careers" />
+          <motion.img  whileHover={{ scale: 1.1 }}  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }} transition={{duration:2}}
+          width={1000} src="\assets\careers.webp" alt="careers" />
         </div>
         <div className=" text-center smd:text-left smd:flex justify-between m-auto px-7 py-6 gap-11 mt-8 mb-5 ">
           <div className="sm:px-[4vw]">
             <div>
-              <h4 className="font-bold text-xl sm:text-2xl md:text-3xl">Join Nacto Care</h4>
-              <h2 className="font-bold text-center mx-auto text-3xl sm:text-4xl md:text-5xl leading-[2rem] my-6 smd:ml-0 smd:text-left max-w-[20ch]">
+              <motion.h4 initial={{ y: -200 }}
+  whileInView={{ y:0}} transition={{ duration:1}} className="font-bold text-xl sm:text-2xl md:text-3xl">Join Nacto Care</motion.h4>
+              <motion.h2 initial={{ x: -200 }}
+  whileInView={{ x:0}} transition={{ duration:1}} className="font-bold text-center mx-auto text-3xl sm:text-4xl md:text-5xl leading-[2rem] my-6 smd:ml-0 smd:text-left max-w-[20ch]">
                 We are looking for best healthcare professionals
-              </h2>
-              <p className="mx-auto text-xm text-center smd:text-left max-w-[72ch] my-2 text-zinc-600">
+              </motion.h2>
+              <motion.p initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }} transition={{duration:2}} className="mx-auto text-xm text-center smd:text-left max-w-[72ch] my-2 text-zinc-600">
                 We need you to join us in our journey to reshape healthcare in
                 India. At Nacto Care, we empower nurses and enhance
                 accessibility to healthcare, revolutionizing the industry. Join
                 us to be part of a mission-driven team committed to making a
                 meaningful impact.
-              </p>
-              <p className="mx-auto text-xm text-center smd:text-left max-w-[72ch] my-2 text-zinc-600">
+              </motion.p>
+              <motion.p initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }} transition={{duration:2}} className="mx-auto text-xm text-center smd:text-left max-w-[72ch] my-2 text-zinc-600">
                 Let's cater the nursing in our nation and fulfill the needs and
                 in return we give you an opportunity to earn and improve your
                 lifestyle. A win win for all of us.
-              </p>
+              </motion.p>
             </div>
           </div>
           <div className="mt-16 mb-4 text-center m-auto sm:flex sm:px-8 sm:gap-8 smd:block smd:text-left">
             <div className="flex flex-col gap-3  items-center smd:gap-5 smd:flex smd:flex-row max-w-[70ch] mb-4">
               <div>
-                <img
+                <motion.img initial={{ x: -200 }}
+  whileInView={{ x:0}} transition={{ duration:1}}
                   src="\assets\empowering.webp"
                   height={100}
                   width={100}
@@ -49,7 +58,8 @@ function CareersPage() {
                   className="w-[5rem] sm:w-[4rem] smd:w-[7rem] lg:w-[6rem] xl:w-[5rem]"
                 />
               </div>
-              <div className="max-w-[70ch] mb-3">
+              <motion.div initial={{ x: -200 }}
+  whileInView={{ x:0}} transition={{ duration:1}} className="max-w-[70ch] mb-3">
                 <h2 className="text-zinc-700 font-bold text-xl sm:mb-2 smd:mb-0">
                   We Empower Healthcare workers
                 </h2>
@@ -57,13 +67,15 @@ function CareersPage() {
                   Championing Indian nurses with better opportunities, support,
                   and career growth, fostering professional excellence.
                 </p>
-              </div>
+              </motion.div>
             </div>
             <div className="flex flex-col  gap-3 items-center  smd:gap-5 smd:flex smd:flex-row max-w-[70ch] mb-4">
               <div>
-                <img src="\assets\times.webp" height={100} width={100} alt="" className="w-[5rem] sm:w-[4rem] smd:w-[7rem] lg:w-[6rem] xl:w-[5rem]" />
+                <motion.img initial={{ x: -200 }}
+  whileInView={{ x:0}} transition={{ duration:1}} src="\assets\times.webp" height={100} width={100} alt="" className="w-[5rem] sm:w-[4rem] smd:w-[7rem] lg:w-[6rem] xl:w-[5rem]" />
               </div>
-              <div className="max-w-[70ch] mb-3">
+              <motion.div initial={{ x: -200 }}
+  whileInView={{ x:0}} transition={{ duration:1}} className="max-w-[70ch] mb-3">
                 <h2 className="text-zinc-700 font-bold text-xl sm:mb-2 smd:mb-0">
                   Own the Time
                 </h2>
@@ -72,9 +84,10 @@ function CareersPage() {
                   freelancing career choice, while prioritizing your well-being
                   and satisfaction.
                 </p>
-              </div>
+              </motion.div>
             </div>
-            <div className=" flex flex-col gap-3  items-center smd:gap-5  smd:flex  smd:flex-row max-w-[70ch] mb-4">
+            <motion.div initial={{ x: -200 }}
+  whileInView={{ x:0}} transition={{ duration:1}} className=" flex flex-col gap-3  items-center smd:gap-5  smd:flex  smd:flex-row max-w-[70ch] mb-4">
               <div>
                 <img src="\assets\up.webp" height={100} width={100} className="w-[5rem] sm:w-[4rem] smd:w-[7rem] lg:w-[6rem] xl:w-[5rem]" />
               </div>
@@ -87,18 +100,19 @@ function CareersPage() {
                   and strengthening relationships for further opportunities.
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
-      <div
+      <motion.div initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }} transition={{duration:1}} whileHover={{ scale: 1.1 }} 
         className="bg-green-600 w-[80vw] mb-12  m-auto rounded-xl shadow-xl text-white text-center px-4 py-5 md:py-7 lg:py-8 shadow-green-400 cursor-pointer"
         onClick={handleRedirect}
       >
         <h2 className="text-lg md:text-2xl lg:text-3xl font-bold">
           Send your Job Application @ Nacto-Care
         </h2>
-      </div>
+      </motion.div>
     </>
   );
 }

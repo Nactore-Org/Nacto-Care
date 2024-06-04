@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { IoEye, IoEyeOff } from "react-icons/io5";
+import {motion} from "framer-motion";
 
 function SignupPage() {
   const [passVis, setPassVis] = useState(false);
   const [conVis, setConVis] = useState(false);
   return (
     <>
-      <section class="bg-zinc-50 py-8 min-h-screen signup">
+      <motion.section initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }} transition={{duration:2}} class="bg-zinc-50 py-8 min-h-screen signup">
         <div class="flex flex-col items-center max-w-[28rem] justify-center px-6 py-8 mx-auto mt-7 lg:py-8">
           <a
             href="#"
@@ -113,7 +115,7 @@ function SignupPage() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 }

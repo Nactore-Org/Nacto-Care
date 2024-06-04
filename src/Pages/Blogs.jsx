@@ -13,7 +13,8 @@ const Blogs = () => {
   };
 
   return (
-    <div className="flex w-full px-8 pt-10 pb-32 bg-white shadow-lg rounded-lg blog justify-evenly">
+    <div initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }} transition={{duration:2}} className="flex w-full px-8 pt-10 pb-32 bg-white shadow-lg rounded-lg blog justify-evenly">
       <div className="hidden h-full w-1/3 md:flex px-4 justify-center md:py-32">
         <div className="flex">
           <div className="w-12 h-12 bg-black dark:bg-white text-white dark:text-black rounded-full flex items-center justify-center text-xl">

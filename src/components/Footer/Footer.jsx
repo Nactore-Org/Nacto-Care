@@ -1,11 +1,13 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import {motion} from "framer-motion";
 
 function Footer() {
   return (
     <>
-      <div>
+      <motion.div initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }} transition={{duration:4}}>
         <footer className="bg-zinc-100 footer">
           <div className="mx-auto w-full max-w-screen-xl">
             <h1 className="font-bold py-5 px-4 md:px-10 lg:px-20 text-3xl">Nacto Care</h1>
@@ -106,7 +108,7 @@ function Footer() {
             </div>
           </div>
         </footer>
-      </div>
+      </motion.div>
     </>
   );
 }
