@@ -3,6 +3,9 @@ import Form from "../components/Form/Form";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import VanillaTilt from "vanilla-tilt";
+import certifiedWorkers from "../Pages/Images/certifiedWorkers.jpeg";
+import getCareAnywhere from "../Pages/Images/getCareAnywhere.jpg";
+import noHiddenFees from "../Pages/Images/noHiddenFees.png";
 
 function LandingPage() {
   useEffect(() => {
@@ -128,99 +131,86 @@ function LandingPage() {
           </div>
         </div>
 
-        {/* Block 3 */}
-        {/* <div className="mt-52 max-w-screen-xl mx-auto" id="block3">
-          <div className="text-center">
-            <h3 className="text-3xl font-medium">Category</h3>
-            <h2 className="text-5xl mb-20 font-bold">Choose your ride now</h2>
-          </div>
-          <CatPrev />
-        </div> */}
-
         {/* Block 5 */}
-        <div className="m-auto flex flex-col items-center">
-          <div className="block text-center smd:text-left smd:flex justify-between m-auto px-11 py-6 gap-11 mt-8 mb-8">
-            <div>
-              <div>
-                <h4 className="font-bold text-2xl">Why Choose Us</h4>
-                <h2 className="font-bold text-center ml-auto mr-auto smd:ml-0 text-5xl my-4 smd:text-left max-w-[20ch]">
+        <div className="m-auto flex flex-col items-center text-center">
+          <div className="px-11 py-6 mt-8 mb-8">
+            <h4 className="font-bold text-2xl text-center">Why Choose Us</h4>
+            <div className="flex flex-col sm:flex-row justify-center mt-4 gap-12">
+              <div className="max-w-[45ch] text-left px-4">
+                <h2 className="font-bold text-3xl mb-4">
                   We value health, healthcare workers, and the nation
                 </h2>
-                <p className="w-full text-center smd:text-left max-w-[65ch] my-2 text-zinc-600 privacy">
+                <p className="text-zinc-600 mb-4">
                   We believe in valuing every aspect of health, from individual
                   wellness to the tireless dedication of those who nurture it.
-                  Nurses in India are migrating to different nations to find
-                  better opportunities, but we are on a mission to provide them
-                  work opportunities by fulfilling the needs of home nursing as
-                  a freelancing solution and connecting the patients with
-                  certified nurses.
+                  Nurses in India are migrating to different nations to find better
+                  opportunities, but we are on a mission to provide them work
+                  opportunities by fulfilling the needs of home nursing as a
+                  freelancing solution and connecting the patients with certified
+                  nurses.
                 </p>
-                <p className="w-full text-center smd:text-left max-w-[65ch] my-2 text-zinc-600 privacy">
-                  For the care seekers, we provide personalized healthcare care
-                  plans and health insurance which will protect them in case of
-                  emergency. Covering both the aspects of care seekers and care
-                  givers, we aim to solve the health care needs of the world's
-                  largest democratic nation.
+                <p className="text-zinc-600">
+                  For the care seekers, we provide personalized healthcare care plans
+                  and health insurance which will protect them in case of emergency.
+                  Covering both the aspects of care seekers and care givers, we aim to
+                  solve the health care needs of the world's largest democratic nation.
                 </p>
               </div>
-            </div>
-            <div className="my-16 text-center m-auto smd:text-left">
-              <div className="flex flex-col gap-3 items-center smd:gap-5 smd:flex smd:flex-row max-w-[70ch] mb-4">
-                <div>
+              <div className="max-w-[45ch] px-4">
+                <div className="flex flex-col gap-6 mt-8 sm:mt-0">
+                  <div className="flex items-center">
+                    <img
+                      src={certifiedWorkers}
+                      height={150}
+                      width={150}
+                      alt="Certified Professional Healthcare Workers"
+                      className="rounded-lg shadow-lg transition-transform transform hover:scale-105"
+                    />
+                    <div className="ml-4">
+                      <h2 className="text-green-500 font-bold text-xl">
+                        Certified Professional Healthcare Workers
+                      </h2>
+                      <p className="text-zinc-500 font-medium text-xm">
+                        We ensure quality care by connecting you with certified healthcare
+                        professionals you can trust. Your well-being is our priority.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center">
+                    <img
+                      src={noHiddenFees}
+                      width={150}
+                      height={150}
+                      alt="No Hidden Charges"
+                      className="rounded-lg shadow-lg transition-transform transform hover:scale-105"
+                    />
+                    <div className="ml-4">
+                      <h2 className="text-blue-500 font-bold text-xl">
+                        No Hidden Charges
+                      </h2>
+                      <p className="text-zinc-500 font-medium text-xm">
+                        Enjoy peace of mind with our no hidden charges policy. We believe in
+                        transparent and honest pricing. What you see is what you pay.
+                        </p>
+                  </div>
+                </div>
+                <div className="flex items-center">
                   <img
-
-                    src="/assets/health-professional.png"
-                    height={100}
-                    width={100}
-                    alt=""
+                    src={getCareAnywhere}
+                    height={150}
+                    width={150}
+                    alt="Get Care Anywhere"
+                    className="rounded-lg shadow-lg transition-transform transform hover:scale-105"
                   />
-                </div>
-                <div className="max-w-[70ch] mb-3">
-                  <h2 className="text-zinc-700 font-bold text-xl contact-para">
-                    Certified Professional Healthcare Workers
-                  </h2>
-                  <p className="max-w-[38ch] text-zinc-500 font-medium text-xm privacy">
-                    We ensure quality care by connecting you with certified
-                    healthcare professionals you can trust. Your well-being is
-                    our priority.
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-col gap-3 items-center smd:gap-5 smd:flex smd:flex-row max-w-[70ch] mb-4">
-                <div>
-
-                  <img src="/assets/debt.png" height={100} width={100} alt="" />
-
-                  <img src="\assets\debt.webp" height={100} width={100} alt="" />
-
-                </div>
-                <div className="max-w-[70ch] mb-3">
-                  <h2 className="text-zinc-700 font-bold text-xl contact-para">
-                    No Hidden Charges
-                  </h2>
-                  <p className="max-w-[38ch] text-zinc-500 font-medium text-xm privacy">
-                    Enjoy peace of mind with our no hidden charges policy. We
-                    believe in transparent and honest pricing. What you see is
-                    what you pay.
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-col gap-3 items-center smd:gap-5 smd:flex smd:flex-row max-w-[70ch] mb-4">
-                <div>
-
-                  <img src="/assets/india.png" height={100} width={100} alt="" />
-
-                  <img src="\assets\india.webp" height={100} width={100} />
-
-                </div>
-                <div className="max-w-[70ch] mb-3">
-                  <h2 className="text-zinc-700 font-bold text-xl contact-para">
-                    Get Care, Anywhere
-                  </h2>
-                  <p className="max-w-[38ch] text-zinc-500 font-medium text-xm privacy">
-                    We are constantly expanding our service across cities in
-                    India.
-                  </p>
+                  <div className="ml-4">
+                    <h2 className="text-red-500 font-bold text-xl">
+                      Get Care, Anywhere
+                    </h2>
+                    <p className="text-zinc-500 font-medium text-xm">
+                    We are constantly expanding our service across cities in India.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
