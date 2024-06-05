@@ -24,8 +24,11 @@ import TermsAndConditions from "./Pages/TermsAndConditions.jsx";
 import BrandCenter from "./Pages/BrandCenter.jsx";
 import ScrollToTopButton from "./ScrollToTopButton"; // Import ScrollToTopButton
 import Guidelines from "./Pages/Guidelines.jsx";
+import Services from "./Pages/Services.jsx";
 import Faq from "./Pages/Faq.jsx";
 import FeedbackPage from "./Pages/FeedbackForm.jsx"; // Import FeedbackPage
+import Nurses from "./Pages/Nurses.jsx";
+import Patients from "./Pages/Patients.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -36,6 +39,7 @@ const router = createBrowserRouter(
       <Route path="ourbrand" element={<BrandCenter />} />
       <Route path="login" element={<LoginPage />} />
       <Route path="signup" element={<SignupPage />} />
+      <Route path="services" element={<Services />} />
       <Route path="about" element={<AboutPage />} />
       <Route path="blog" element={<BlogPage />} />
       <Route path="blog/:slug" element={<Blogs />} />
@@ -44,6 +48,8 @@ const router = createBrowserRouter(
       <Route path="guidelines" element={<Guidelines/>}/>
       <Route path="licensing" element={<Licensing />} />
       <Route path="termsandconditions" element={<TermsAndConditions />} />
+      <Route path="findnurses" element={<Nurses/>}/>
+      <Route path="findpatients" element={<Patients/>}/>
       <Route path="faq" element={<Faq/>}/>
       <Route path="feedback" element={<FeedbackPage />} /> {/* Feedback route */}
     </Route>
