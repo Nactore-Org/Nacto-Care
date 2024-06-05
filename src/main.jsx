@@ -26,6 +26,7 @@ import ScrollToTopButton from "./ScrollToTopButton"; // Import ScrollToTopButton
 import Guidelines from "./Pages/Guidelines.jsx";
 import Faq from "./Pages/Faq.jsx";
 import FeedbackPage from "./Pages/FeedbackForm.jsx"; // Import FeedbackPage
+import NotFound from "./Pages/NotFound.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -46,6 +47,7 @@ const router = createBrowserRouter(
       <Route path="termsandconditions" element={<TermsAndConditions />} />
       <Route path="faq" element={<Faq/>}/>
       <Route path="feedback" element={<FeedbackPage />} /> {/* Feedback route */}
+      <Route path="*" element={<NotFound />} />
     </Route>
   )
 );
