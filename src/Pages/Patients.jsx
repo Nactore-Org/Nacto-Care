@@ -1,8 +1,8 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { Patient } from '../data/Patient';
-import ageyrs from '../../public/assets/age.png';
-import serve from '../../public/assets/services.png'; 
+import ageyrs from '../../public/assets/age.webp';
+import serve from '../../public/assets/services.webp'; 
 
 const Patients = () => {
   const location = useLocation();

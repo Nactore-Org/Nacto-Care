@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import patient from '../../public/assets/patient.jpg';
-import nurse from '../../public/assets/nurse-services.jpg';
+import patient from '../../public/assets/patient.webp';
+import nurse from '../../public/assets/nurse-services.webp';
 import { useNavigate } from 'react-router-dom';
 
 const Services = () => {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { Nurse } from '../data/Nurse';
-import hoslocation from '../../public/assets/location.png';
-import degree from '../../public/assets/qualification.png'; 
+import hoslocation from '../../public/assets/location.webp';
+import degree from '../../public/assets/qualification.webp'; 
 
 const Nurses = () => {
   const location = useLocation();

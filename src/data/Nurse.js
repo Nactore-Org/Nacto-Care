@@ -1,8 +1,8 @@
-import profile1 from '../../public/assets/profile1.png';
-import profile2 from '../../public/assets/profile2.png';
-import profile3 from '../../public/assets/profile3.png';
-import profile4 from '../../public/assets/profile4.png';
-import profile5 from '../../public/assets/profile5.png';
+import profile1 from '../../public/assets/profile1.webp';
+import profile2 from '../../public/assets/profile2.webp';
+import profile3 from '../../public/assets/profile3.webp';
+import profile4 from '../../public/assets/profile4.webp';
+import profile5 from '../../public/assets/profile5.webp';
 
 export const Nurse = [
     {
