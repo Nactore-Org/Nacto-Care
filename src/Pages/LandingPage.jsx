@@ -3,8 +3,8 @@ import Form from "../components/Form/Form";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import VanillaTilt from "vanilla-tilt";
-import certifiedWorkers from "../Pages/Images/certifiedWorkers.jpeg";
-import getCareAnywhere from "../Pages/Images/getCareAnywhere.jpg";
+import certifiedWorkers from "../Pages/Images/certifiedWorkers.png";
+import getCareAnywhere from "../Pages/Images/getCareAnywhere.png";
 import noHiddenFees from "../Pages/Images/noHiddenFees.png";
 
 function LandingPage() {
@@ -35,8 +35,8 @@ function LandingPage() {
             </h2>
             <p className="max-w-[55ch] m-auto lxg:ml-0 mb-6">
               Find the nurse you need for your loved ones at home. Professional
-              Cure, personalized care plans, flexible scheduling, health
-              insurance and much more.
+              care, personalized care plans, flexible scheduling, health
+              insurance, and much more.
             </p>
             <div className="mt-12 sm:mt-9 flex items-center flex-col sm:flex-row sm:justify-center lxg:justify-start sm:gap-4">
               <Link to="book-nurse">
@@ -83,7 +83,7 @@ function LandingPage() {
                 width={130}
                 height={130}
                 className="block"
-                alt=""
+                alt="Professional Nurse"
               />
               <div className="text-center mt-8">
                 <h2 className="text-2xl font-bold">Professional Nurse</h2>
@@ -101,7 +101,7 @@ function LandingPage() {
                 width={130}
                 height={130}
                 className="block"
-                alt=""
+                alt="Contact Support"
               />
               <div className="text-center mt-8">
                 <h2 className="text-2xl font-bold">Contact Support</h2>
@@ -118,7 +118,7 @@ function LandingPage() {
                 width={130}
                 height={130}
                 className="block"
-                alt=""
+                alt="We Care for You"
               />
               <div className="text-center mt-8">
                 <h2 className="text-2xl font-bold">We Care for You</h2>
@@ -164,7 +164,7 @@ function LandingPage() {
                       height={150}
                       width={150}
                       alt="Certified Professional Healthcare Workers"
-                      className="rounded-lg shadow-lg transition-transform transform hover:scale-105"
+                      className="shadow-lg transition-transform transform hover:scale-105"
                     />
                     <div className="ml-4">
                       <h2 className="text-green-500 font-bold text-xl">
@@ -182,7 +182,7 @@ function LandingPage() {
                       width={150}
                       height={150}
                       alt="No Hidden Charges"
-                      className="rounded-lg shadow-lg transition-transform transform hover:scale-105"
+                      className="shadow-lg transition-transform transform hover:scale-105"
                     />
                     <div className="ml-4">
                       <h2 className="text-blue-500 font-bold text-xl">
@@ -191,23 +191,23 @@ function LandingPage() {
                       <p className="text-zinc-500 font-medium text-xm">
                         Enjoy peace of mind with our no hidden charges policy. We believe in
                         transparent and honest pricing. What you see is what you pay.
-                        </p>
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-center">
-                  <img
-                    src={getCareAnywhere}
-                    height={150}
-                    width={150}
-                    alt="Get Care Anywhere"
-                    className="rounded-lg shadow-lg transition-transform transform hover:scale-105"
-                  />
-                  <div className="ml-4">
-                    <h2 className="text-red-500 font-bold text-xl">
-                      Get Care, Anywhere
-                    </h2>
-                    <p className="text-zinc-500 font-medium text-xm">
-                    We are constantly expanding our service across cities in India.
+                  <div className="flex items-center">
+                    <img
+                      src={getCareAnywhere}
+                      height={150}
+                      width={150}
+                      alt="Get Care Anywhere"
+                      className="shadow-lg transition-transform transform hover:scale-105"
+                    />
+                    <div className="ml-4">
+                      <h2 className="text-red-500 font-bold text-xl">
+                        Get Care, Anywhere
+                      </h2>
+                      <p className="text-zinc-500 font-medium text-xm">
+                        We are constantly expanding our service across cities in India.
                       </p>
                     </div>
                   </div>
