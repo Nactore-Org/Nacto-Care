@@ -1,43 +1,57 @@
 import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import { FaArrowUp } from "react-icons/fa";
 
-const ScrollToTopButton = () => {
+const GoToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const toggleVisibility = () => {
-    if (window.pageYOffset > 300) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   useEffect(() => {
-    window.addEventListener("scroll", toggleVisibility);
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      setIsVisible(currentScrollY > 200); // Change 200 to your desired scroll distance
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
     return () => {
-      window.removeEventListener("scroll", toggleVisibility);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
+  const goToTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
   return (
-    <div className="fixed bottom-8 right-8">
+    <>
       {isVisible && (
-        <button
-          onClick={scrollToTop}
-          className="p-4 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 focus:outline-none"
-          style={{ fontSize: '24px', width: '60px', height: '60px' }}
-        >
-          ↑
-        </button>
+        <Wrapper onClick={goToTop}>
+          <FaArrowUp className="top-btn--icon" />
+        </Wrapper>
       )}
-    </div>
+    </>
   );
 };
 
-export default ScrollToTopButton;
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 95px;
+  right: 20px;
+  color: white;
+  background-color: rgb(22 163 74);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    background-color: #58D68D ;
+  }
+`;
+
+export default GoToTop;
