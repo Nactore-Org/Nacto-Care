@@ -182,3 +182,16 @@ body.dark .privacy {
   border-radius: 10px;
 }
 
+/* .p-4 flex flex-col gap-1 blog-text */
+
+a .blog-card{
+  height:100;
+  width:100;
+
+}
+
+.p-4.flex.flex-col.gap-1.blog-text{
+  height:100;
+  width:100;
+
+}

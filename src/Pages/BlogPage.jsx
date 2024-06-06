@@ -2,86 +2,88 @@ import React from 'react'
 import { useState } from 'react'
 import SingleBlog from '../components/SingleBlog';
 
+
 const BlogPage = () => {
   const [activeTab, setActiveTab] = useState("latest")
   const [blogs, setblogs] = useState([
     {
       id: 1,
-      title: "Lorem Ipsum Blog latest-blog",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      author: "John Doe",
-      publication_date: "2024-05-03",
+      title: "Empowering Nurses: Unlocking Opportunities",
+      content: "We offer growth opportunities, training programs,to help nurses reach their full potential.",
+      author: "Nacto Care Team",
+      publication_date: "2024-06-10",
       tag:"latest"
     },
     {
-      id: 2,
-      title: "Lorem Ipsum Blog latest blog",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      author: "John Doe",
-      publication_date: "2024-05-03",
+      id:2,
+      title: " Home Nursing Services",
+      content: "Personalized Care at Your Doorsstep Elderly AssistanceCompassionate care for seniors, ensuring their well-being and dignity.",
+      author: "Nacto Care Team",
+      publication_date: "2024-06-10",
       tag:"latest"
     },
+
     {
-      id: 3,
-      title: "Lorem Ipsum Blog latest blog",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      author: "John Doe",
+      id:3,
+      title: "Inspiring Future Nurses",
+      content: "A Rewarding Career Choice Let’s make nursing a sought-after profession, one that brings fulfillment and purpose.",
+      author: "Nacto Care Team",
       publication_date: "2024-05-03",
       tag:"latest"
     },
     {
       id: 4,
-      title: "Lorem Ipsum Blog latest blog",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      author: "John Doe",
+      title: " Patient-Centric Approach",
+      content:"Trusting Nacto Care to provide personalized care plans and flexible scheduling options for patients.Timely care when you need it",
+      author: "Nacto Care Team",
       publication_date: "2024-05-03",
       tag:"latest"
     },
     {
       id: 5,
-      title: "Lorem Ipsum Blog trending blog",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      author: "John Doe",
+      title: " Home Nursing Services",
+      content: "Personalized Care at Your Doorstep.Recover comfortably at home with our skilled nurses by your side.",
+      author: "Nacto Care Team",
       publication_date: "2024-05-03",
       tag:"trending"
     },
     {
       id: 6,
-      title: "Lorem Ipsum Blog trending blog",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      author: "John Doe",
+      title: " Inspiring Future Nurses",
+      content: "Outreach Programs: We visit schools and colleges to share the rewards of a nursing career.",
+      author: "Nacto Care Team",
       publication_date: "2024-05-03",
       tag:"trending"
     },
     {
       id: 7,
-      title: "Lorem Ipsum Blog trending blog",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      author: "John Doe",
+      title: " Patient-Centric Approach",
+      content: "Immediate Access: Timely care when you need it, right in the comfort of your home.",
+      author: "Nacto Care Team",
       publication_date: "2024-05-03",
       tag:"trending"
     },
     {
       id: 8,
-      title: "Lorem Ipsum Blog top blog",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      author: "John Doe",
+      title: "The Role of Telehealth in Modern Nursing",
+      content: "Virtual Consultations: How nurses provide remote care and support through telehealth platforms.Maintaining a personal connection in a digital world.",
+      author: "Nacto Care Team",
       publication_date: "2024-05-03",
       tag:"top"
     },
     {
       id: 9,
-      title: "Lorem Ipsum Blog top blog",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      author: "John Doe",
+      title: " Mental Health Support for Nurses",
+      content: "Burnout Prevention: Strategies for managing stress and preventing burnout.Building a strong support system within the nursing community.",
+      author: "Nacto Care Team",
       publication_date: "2024-05-03",
       tag:"top"
     },
     {
-      id: 10,
-      title: "Lorem Ipsum Blog top blog",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      author: "John Doe",
+      id:10,
+      title: " The Impact of Cultural Competence in Nursing",
+      content: "Respecting Traditions: Honoring cultural practices while providing evidence-based care.",
+      author: "Nacto Care Team",
       publication_date: "2024-05-03",
       tag:"top"
     },
