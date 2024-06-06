@@ -8,11 +8,20 @@
 
   .image-container {
     transition: transform 0.3s ease-in-out;
+   
   }
   
   .image-container:hover {
     transform: scale(1.1);
     transition: transform 0.3s ease-in-out;
   }
-  
-  
+/* 
+  .container .p-4{
+    height:300;
+    width:300;
+
+  }
+  .bg-white {
+    height:300;
+    width:300;
+  } */

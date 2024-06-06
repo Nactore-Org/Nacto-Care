@@ -12,6 +12,11 @@ const navLinks = [
     icon: "ri-home-fill", // Added icon property
   },
   {
+    title: "Services",
+    to: "/services",
+    icon: " ri-service-line",
+  },
+  {
     title: "Careers",
     to: "/careers",
     icon: "ri-focus-2-fill",
