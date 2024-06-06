@@ -27,6 +27,7 @@ import Guidelines from "./Pages/Guidelines.jsx";
 import Services from "./Pages/Services.jsx";
 import Faq from "./Pages/Faq.jsx";
 import FeedbackPage from "./Pages/FeedbackForm.jsx"; // Import FeedbackPage
+import NotFound from "./Pages/NotFound.jsx";
 import Nurses from "./Pages/Nurses.jsx";
 import Patients from "./Pages/Patients.jsx";
 
@@ -52,6 +53,7 @@ const router = createBrowserRouter(
       <Route path="findpatients" element={<Patients/>}/>
       <Route path="faq" element={<Faq/>}/>
       <Route path="feedback" element={<FeedbackPage />} /> {/* Feedback route */}
+      <Route path="*" element={<NotFound />} />
     </Route>
   )
 );
