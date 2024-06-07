@@ -3,6 +3,7 @@ import Form from "../components/Form/Form";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import VanillaTilt from "vanilla-tilt";
+import {motion} from "framer-motion";
 
 function LandingPage() {
   useEffect(() => {
@@ -22,7 +23,8 @@ function LandingPage() {
           className="h-[45rem] py-28 text-center lxg:text-left lxg:w-[70rem] m-auto justify-center gap-8 relative bg-gradient-to-b flex"
           id="block1"
         >
-          <div className="py-10 px-7">
+          <motion.div initial={{ x: -200 }}
+  whileInView={{ x:0}} transition={{ duration:1}} className="py-10 px-7">
             <h4 className="font-semibold sm:text-3xl text-2xl mb-3">
               Empower Indian Nurses
             </h4>
@@ -47,9 +49,10 @@ function LandingPage() {
                 </button>
               </ScrollLink>
             </div>
-          </div>
+          </motion.div>
           <div className="py-10 items-end hidden lxg:flex px-7" data-tilt>
-            <img
+            <motion.img initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }} transition={{duration:2}}
               width={400}
               height={400}
               src="/assets/Nurse.webp"
@@ -59,22 +62,26 @@ function LandingPage() {
             />
           </div>
         </div>
-        <div className="lg:mx-14 mx-4 md:mx-10 lg:mt-11 flex justify-center basis-[16rem] ">
+        <motion.div initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }} transition={{duration:2}} className="lg:mx-14 mx-4 md:mx-10 lg:mt-11 flex justify-center basis-[16rem] ">
           <Form />
-        </div>
+        </motion.div>
 
         {/* Block 2 */}
         <div className="px-8 lg:px-16 mt-24 sm:mt-28 md:my-28" id="block2">
           <div className="text-center mb-14 flex flex-col gap-4">
-            <h3 className="text-xl sm:text-3xl font-medium">
+            <motion.h3 initial={{ x: -200 }}
+  whileInView={{ x:0}} transition={{ duration:1}} className="text-xl sm:text-3xl font-medium">
               Book a health checkup now
-            </h3>
-            <h2 className="text-4xl sm:text-5xl font-bold">
+            </motion.h3>
+            <motion.h2 initial={{ x: -200 }}
+  whileInView={{ x:0}} transition={{ duration:1}} className="text-4xl sm:text-5xl font-bold">
               Quick & easy care for elderly and your loved ones
-            </h2>
+            </motion.h2>
           </div>
           <div className="flex flex-col m-auto max-w-[75rem] lg:flex-row justify-evenly mt-14 lg:mt-28">
-            <div className="flex flex-col items-center">
+            <motion.div initial={{ y: 200 }}
+  whileInView={{ y:0}} transition={{ duration:1}} className="flex flex-col items-center">
               <img
                 src="/assets/nurseFlaticon.webp"
                 width={130}
@@ -90,9 +97,10 @@ function LandingPage() {
                   requirements.
                 </p>
               </div>
-            </div>
+            </motion.div>
             {/* Contact Support */}
-            <div className="flex flex-col items-center mt-14 lg:mt-0">
+            <motion.div initial={{ y: 200 }}
+  whileInView={{ y:0}} transition={{ duration:1}} className="flex flex-col items-center mt-14 lg:mt-0">
               <img
                 src="/assets/customer.webp"
                 width={130}
@@ -107,9 +115,10 @@ function LandingPage() {
                   help with any questions or concerns.
                 </p>
               </div>
-            </div>
+            </motion.div>
             {/* We Care for You */}
-            <div className="flex flex-col items-center mt-14 lg:mt-0">
+            <motion.div initial={{ y: 200 }}
+  whileInView={{ y:0}} transition={{ duration:1}} className="flex flex-col items-center mt-14 lg:mt-0">
               <img
                 src="/assets/health-insurance.webp"
                 width={130}
@@ -124,7 +133,7 @@ function LandingPage() {
                   insurance coverage.
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
 
@@ -142,11 +151,14 @@ function LandingPage() {
           <div className="block text-center smd:text-left smd:flex justify-between m-auto px-11 py-6 gap-11 mt-8 mb-8">
             <div>
               <div>
-                <h4 className="font-bold text-2xl">Why Choose Us</h4>
-                <h2 className="font-bold text-center ml-auto mr-auto smd:ml-0 text-5xl my-4 smd:text-left max-w-[20ch]">
+                <motion.h4 initial={{ x: -100 }}
+  whileInView={{ x:0}} transition={{ duration:1}} className="font-bold text-2xl">Why Choose Us</motion.h4>
+                <motion.h2 initial={{ x: -100 }}
+  whileInView={{ x:0}} transition={{ duration:1}} className="font-bold text-center ml-auto mr-auto smd:ml-0 text-5xl my-4 smd:text-left max-w-[20ch]">
                   We value health, healthcare workers, and the nation
-                </h2>
-                <p className="w-full text-center smd:text-left max-w-[65ch] my-2 text-zinc-600 privacy">
+                </motion.h2>
+                <motion.p initial={{ x: -100 }}
+  whileInView={{ x:0}} transition={{ duration:1}} className="w-full text-center smd:text-left max-w-[65ch] my-2 text-zinc-600 privacy">
                   We believe in valuing every aspect of health, from individual
                   wellness to the tireless dedication of those who nurture it.
                   Nurses in India are migrating to different nations to find
@@ -154,17 +166,19 @@ function LandingPage() {
                   work opportunities by fulfilling the needs of home nursing as
                   a freelancing solution and connecting the patients with
                   certified nurses.
-                </p>
-                <p className="w-full text-center smd:text-left max-w-[65ch] my-2 text-zinc-600 privacy">
+                </motion.p>
+                <motion.p initial={{ x: -100 }}
+  whileInView={{ x:0}} transition={{ duration:1}} className="w-full text-center smd:text-left max-w-[65ch] my-2 text-zinc-600 privacy">
                   For the care seekers, we provide personalized healthcare care
                   plans and health insurance which will protect them in case of
                   emergency. Covering both the aspects of care seekers and care
                   givers, we aim to solve the health care needs of the world's
                   largest democratic nation.
-                </p>
+                </motion.p>
               </div>
             </div>
-            <div className="my-16 text-center m-auto smd:text-left">
+            <motion.div initial={{ x: -200 }}
+  whileInView={{ x:0}} transition={{ duration:1}} className="my-16 text-center m-auto smd:text-left">
               <div className="flex flex-col gap-3 items-center smd:gap-5 smd:flex smd:flex-row max-w-[70ch] mb-4">
                 <div>
                   <img
@@ -223,7 +237,7 @@ function LandingPage() {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

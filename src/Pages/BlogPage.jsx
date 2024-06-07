@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import SingleBlog from '../components/SingleBlog';
+import {motion} from "framer-motion";
 
 
 const BlogPage = () => {
@@ -111,7 +112,8 @@ const BlogPage = () => {
     return (
         <>
         {/* Tabs Container */}
-          <div className="grid grid-cols-3 lg:w-1/2 xl:w-1/4 md:w-2/3 text-base sm:text-xl lg:text-2xl w-5/6 mx-auto align-items-center  justify-items-center">
+          <motion.div initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }} transition={{duration:2}} className="grid grid-cols-3 lg:w-1/2 xl:w-1/4 md:w-2/3 text-base sm:text-xl lg:text-2xl w-5/6 mx-auto align-items-center  justify-items-center">
             {/* Top blgs tab */}
             <div id="topTabContainer" className="border-b-2 w-full text-center transition-border duration-300">
                 <button id="topTab" className="relative p-0 m-0 border-0 bg-transparent w-full h-full text-gray-600" onClick={(e)=>handleTabClick(e)}>
@@ -130,11 +132,12 @@ const BlogPage = () => {
                   <h1 className="sticky top-0 left-0 w-full z-[-1]  font-bold mb-4 mt-10 text-center transition-color duration-300">Latest</h1>
                 </button>
             </div>
-          </div> 
-          <div class="container mx-auto px-4 py-8 w-full">
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-[80%] mx-auto">
+          </motion.div> 
+          <div  class="container mx-auto px-4 py-8 w-full">
+              <motion.div initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }} transition={{duration:2}} class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-[80%] mx-auto">
                   {blogsGroupedByTags[activeTab].map((blog)=> <SingleBlog blog={blog}/>)}
-              </div>
+              </motion.div>
           </div>
         </>
     )
