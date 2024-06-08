@@ -3,12 +3,14 @@ import { Outlet, Link } from "react-router-dom";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import { Helmet } from "react-helmet";
+import Testimonials from "./Testimonials/Testimonials";
 
 function Layout() {
   return (
     <div className="App">
       <Header />
       <Outlet />
+      <Testimonials />
       <Footer />
       <Link
         to="/feedback"
