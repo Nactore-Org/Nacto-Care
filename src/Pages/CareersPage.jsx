@@ -8,7 +8,7 @@ function CareersPage() {
   };
   return (
     <>
-      <div className="py-8 mb-5 flex w-[50vw] justify-start ml-auto mr-auto mt-10">
+      <div className="py-2 mb-5 flex w-[50vw] justify-start ml-auto mr-auto mt-5">
         <div>
           <BackBtn Page={"Careers"} />
         </div>
