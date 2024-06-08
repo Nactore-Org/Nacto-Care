@@ -62,14 +62,14 @@ const AboutPage = () => {
         <div id='about-us' style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           <h5 className="font-semibold text-center text-xl pb-2 lg:pb-6 text-green-500 mt-24 sm:mt-32 sm:text-[2rem]">Our Features</h5>
           <div className='about-us-block lg:px-16'>
-            <div className='about-us-community' onMouseOver={() => setNurseHovered(true)} onMouseLeave={() => setNurseHovered(false)}>
+            <div className='about-us-community transition-background duration-300 ease-linear' onMouseOver={() => setNurseHovered(true)} onMouseLeave={() => setNurseHovered(false)}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                 <img src={nurseHovered ? nurse : nursehover} alt="" style={{ marginLeft: '1rem', marginTop: '1rem', width: '3rem' }} />
                 <div className='about-us-blk-text'>Instant Care</div>
               </div>
               <p className='about-us-blk-para'>Experience seamless booking with Instant Care. Quickly schedule qualified nurses for in-home assistance, ensuring convenience and peace of mind for you and your loved ones.</p>
             </div>
-            <div className='about-us-product' onMouseOver={() => setCareerHovered(true)} onMouseLeave={() => setCareerHovered(false)}>
+            <div className='about-us-product transition-background duration-300 ease-linear' onMouseOver={() => setCareerHovered(true)} onMouseLeave={() => setCareerHovered(false)}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                 <img src={careerHovered ? careerhover : career} alt="" style={{ marginLeft: '1rem', marginTop: '1rem', width: '3rem' }} />
                 <div className='about-us-blk-text'>Nurse Careers</div>
@@ -78,14 +78,14 @@ const AboutPage = () => {
             </div>
           </div>
           <div className='about-us-block lg:px-16'>
-            <div className='about-us-location' onMouseOver={() => setPlaceHovered(true)} onMouseLeave={() => setPlaceHovered(false)}>
+            <div className='about-us-location transition-background duration-300 ease-linear' onMouseOver={() => setPlaceHovered(true)} onMouseLeave={() => setPlaceHovered(false)}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                 <img src={placeHovered ? anywherehover : anywhere} alt="" style={{ marginLeft: '1rem', marginTop: '1rem', width: '3rem' }} />
                 <div className='about-us-blk-text'>Nationwide Reach</div>
               </div>
               <p className='about-us-blk-para'>Our commitment to healthcare accessibility means we're expanding Nationwide Reach. Now serving more cities across India, providing quality care wherever you are.</p>
             </div>
-            <div className='about-us-event' onMouseOver={() => setSupport(true)} onMouseLeave={() => setSupport(false)}>
+            <div className='about-us-event transition-background duration-300 ease-linear' onMouseOver={() => setSupport(true)} onMouseLeave={() => setSupport(false)}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                 <img src={support ? anytimehover : anytime} alt="" style={{ marginLeft: '1rem', marginTop: '1rem', width: '3rem' }} />
                 <div className='about-us-blk-text'>Support Hub</div>
