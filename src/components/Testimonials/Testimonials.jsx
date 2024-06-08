@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import testimonials from './testimonials';
+import stars from "../../assets/stars.png";
 
 function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -35,7 +36,7 @@ function Testimonials() {
   };
 
   return (
-    <div className='mb-9 flex flex-col gap-4 px-[2rem] md:px-[6.5rem]'>
+    <div className='mb-9 flex flex-col gap-4 px-[2rem] md:px-[6.5rem] '>
       <div className='text-2xl font-bold text-black text-center'>
         What Our Users Say
       </div>
@@ -48,19 +49,20 @@ function Testimonials() {
             <FaChevronLeft size={35} />
           </button>
         </div>
-        <div className='w-full flex justify-center overflow-hidden'>
+        <div className='w-full flex justify-center overflow-hidden py-3'>
           <div className='flex transition-transform duration-500 ease-in-out gap-2'>
             {getVisibleTestimonials().map((testimonial, index) => (
               <div key={index} className='flex-shrink-0 w-full md:w-1/3 p-2'>
-                <div className='w-full p-4 bg-white border border-green-300 rounded-md shadow-md'>
+                <div className='w-full p-4 bg-teal-50 shadow-inner hover:bg-sky-200 hover:shadow-2xl border-2 border-black-500 rounded-md shadow-md'>
                   <div className='flex items-center gap-4 p-2'>
                     <img src={testimonial.image} alt={testimonial.name} className='w-16 h-16 rounded-full' />
                     <div>
-                      <p className='text-lg font-semibold text-black'>{testimonial.name}</p>
-                      <p className='text-sm text-gray-600'>{testimonial.position}, {testimonial.company}</p>
+                      <p className='text-lg font-semibold text-red-500'>{testimonial.name}</p>
+                      <p className='text-sm text-yellow-500'>{testimonial.position}, {testimonial.company}</p>
                     </div>
                   </div>
-                  <p className='mt-4 text-gray-700'>{testimonial.text}</p>
+                  <p className='mt-4 text-fuchsia-800'>{testimonial.text}</p>
+                  <img src={stars} height={60} width={90}/>
                 </div>
               </div>
             ))}
