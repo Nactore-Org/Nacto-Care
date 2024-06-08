@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import SingleBlog from '../components/SingleBlog';
+import BackBtn from "../components/BackBtn/BackBtn";
 
 
 const BlogPage = () => {
@@ -110,6 +111,11 @@ const BlogPage = () => {
     }
     return (
         <>
+           <div className="py-2 mb-1 flex w-[50vw] justify-start ml-auto mr-auto mt-5">
+              <div>
+                  <BackBtn Page={"Blogs"} />
+              </div>
+           </div>
         {/* Tabs Container */}
           <div className="grid grid-cols-3 lg:w-1/2 xl:w-1/4 md:w-2/3 text-base sm:text-xl lg:text-2xl w-5/6 mx-auto align-items-center  justify-items-center">
             {/* Top blgs tab */}

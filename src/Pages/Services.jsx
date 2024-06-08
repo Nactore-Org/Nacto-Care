@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import patient from '../../public/assets/patient.webp';
 import nurse from '../../public/assets/nurse-services.webp';
 import { useNavigate } from 'react-router-dom';
+import BackBtn from "../components/BackBtn/BackBtn";
+
 
 const Services = () => {
   const [city, setCity] = useState('Delhi'); // Default city
@@ -17,7 +19,12 @@ const Services = () => {
 
   return (
     <div>
-      <div className='bg-green-400 block m-auto w-3/4 rounded-md p-10 my-10'>
+      <div className="py-2 mb-5 flex w-[50vw] justify-start ml-auto mr-auto mt-5">
+        <div>
+          <BackBtn Page={"Services"} />
+        </div>
+      </div>     
+    <div className='bg-green-400 block m-auto w-3/4 rounded-md p-10 my-10'>
         <h1 className='md:text-5xl text-3xl text-center text-white font-bold mb-10'>Find the Best Nurses</h1>
         <label
           className="block uppercase tracking-wide text-black-700 dark:text-white text text-xs font-bold mb-2"
