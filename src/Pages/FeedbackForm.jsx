@@ -72,7 +72,7 @@ function FeedbackPage() {
                 } focus:outline-none`}
                 style={{ fontSize: "2rem" }} // Adjust font size here
               >
-                {rating >= value ? "😊" : "😐"}
+                {value === 1 ? "😁" : value === 2 ? "🙂" : value === 3 ? "🤯" : value === 4 ? "😠" : "😡"}
               </button>
             ))}
           </div>
