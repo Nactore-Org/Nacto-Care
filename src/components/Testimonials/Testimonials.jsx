@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import testimonials from './testimonials';
-import stars from "../../assets/stars.png";
 
 function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -62,7 +61,6 @@ function Testimonials() {
                     </div>
                   </div>
                   <p className='mt-4 text-fuchsia-800'>{testimonial.text}</p>
-                  <img src={stars} height={60} width={90}/>
                 </div>
               </div>
             ))}
