@@ -8,6 +8,7 @@ function FeedbackPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [feedback, setFeedback] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false); // State for submission confirmation
 
   const handleRatingChange = (value) => {
     setRating(value);
@@ -26,7 +27,9 @@ function FeedbackPage() {
   };
 
   const handleRedirect = () => {
-    const subject = encodeURIComponent("Feedback and Suggestions for Improvement");
+    const subject = encodeURIComponent(
+      "Feedback and Suggestions for Improvement"
+    );
     const body = encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\nRating: ${rating}\nFeedback: ${feedback}`
     );
@@ -36,6 +39,7 @@ function FeedbackPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     handleRedirect();
+    setIsSubmitted(true); // Set submission confirmation
   };
 
   return (
@@ -77,7 +81,10 @@ function FeedbackPage() {
             ))}
           </div>
         </div>
-        <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
+        >
           <label
             htmlFor="name"
             className={`block mb-2 text-lg font-semibold ${
@@ -136,6 +143,15 @@ function FeedbackPage() {
             Submit Feedback
           </button>
         </form>
+        {isSubmitted && (
+          <p
+            className={`mt-6 text-lg font-semibold text-center ${
+              theme === "dark" ? "text-green-400" : "text-green-600"
+            }`}
+          >
+            Thank you for your feedback!
+          </p>
+        )}
       </div>
     </div>
   );
