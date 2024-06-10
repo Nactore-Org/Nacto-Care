@@ -7,7 +7,6 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import "./index.css";
-import Lenis from '@studio-freight/lenis';
 import Layout from "./components/Layout.jsx";
 import LandingPage from "./Pages/LandingPage.jsx";
 import CareersPage from "./Pages/CareersPage.jsx";
