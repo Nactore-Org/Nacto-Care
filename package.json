@@ -15,7 +15,6 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
-    "@studio-freight/lenis": "^1.0.42",
     "antd": "^5.17.3",
     "axios": "^1.6.8",
     "react": "^18.2.0",
