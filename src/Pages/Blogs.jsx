@@ -1,93 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams,useLocation } from "react-router-dom";
 
 const Blogs = () => {
   const params = useParams();
   const { slug } = params;
-  const [blogs, setblogs] = useState([
-    {
-      id: 1,
-      title: "Lorem Ipsum Blog",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      author: "John Doe",
-      publication_date: "2024-05-03",
-    },
-    {
-      id: 2,
-      title: "Lorem Ipsum Blog",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      author: "John Doe",
-      publication_date: "2024-05-03",
-    },
-    {
-      id: 3,
-      title: "Lorem Ipsum Blog",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      author: "John Doe",
-      publication_date: "2024-05-03",
-    },
-    {
-      id: 4,
-      title: "Lorem Ipsum Blog",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      author: "John Doe",
-      publication_date: "2024-05-03",
-    },
-    {
-      id: 5,
-      title: "Lorem Ipsum Blog",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      author: "John Doe",
-      publication_date: "2024-05-03",
-    },
-    {
-      id: 6,
-      title: "Lorem Ipsum Blog",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      author: "John Doe",
-      publication_date: "2024-05-03",
-    },
-    {
-      id: 7,
-      title: "Lorem Ipsum Blog",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      author: "John Doe",
-      publication_date: "2024-05-03",
-    },
-    {
-      id: 8,
-      title: "Lorem Ipsum Blog",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      author: "John Doe",
-      publication_date: "2024-05-03",
-    },
-    {
-      id: 9,
-      title: "Lorem Ipsum Blog",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      author: "John Doe",
-      publication_date: "2024-05-03",
-    },
-    {
-      id: 10,
-      title: "Lorem Ipsum Blog",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      author: "John Doe",
-      publication_date: "2024-05-03",
-    },
-    // Add more blog objects as needed
-  ]);
+  const location = useLocation();
 
-  const [blog, setBlog] = useState(null);
-
-  useEffect(() => {
-    const selectedBlog = blogs.find((blog) => blog.id === parseInt(slug));
-    setBlog(selectedBlog);
-  }, [slug]);
-
-  if (!blog) {
-    return <div>Loading...</div>;
-  }
+  const [blog, setBlog] = useState(location.state.blogProp);
 
   const getAvatarLetter = (author) => {
     return author.charAt(0).toUpperCase();
