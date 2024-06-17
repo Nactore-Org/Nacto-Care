@@ -102,6 +102,7 @@ function Footer() {
                 </ul>
               </div>
             </div>
+            <hr className="my-6 border-gray-300" />
             <div className="px-4 py-4 flex items-center justify-center">
               © {new Date().getFullYear().toString()} Nactore Organization, Building for democracy with care
             </div>
