@@ -19,9 +19,9 @@ function Layout() {
       >
         Help Us Improve!
       </Link>
-      <Helmet>
+      <Helmet >
         <script src="https://cdn.botpress.cloud/webchat/v2/inject.js" defer async></script>
-        <script src="https://mediafiles.botpress.cloud/b2905264-a15e-41ab-83e9-7db49dbaabc3/webchat/v2/config.js" defer async></script>
+        <script style="margin:-2%" src="https://mediafiles.botpress.cloud/b2905264-a15e-41ab-83e9-7db49dbaabc3/webchat/v2/config.js" defer async></script>
       </Helmet>
     </div>
   );

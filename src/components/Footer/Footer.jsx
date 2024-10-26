@@ -102,7 +102,7 @@ function Footer() {
                 </ul>
               </div>
             </div>
-            <div className="px-4 py-4 flex items-center justify-center">
+            <div className="px-4 py-10 flex items-center justify-center">
               © {new Date().getFullYear().toString()} Nactore Organization, Building for democracy with care
             </div>
           </div>
