@@ -1,9 +1,39 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import BackBtn from "../components/BackBtn/BackBtn";
+import emailjs from "@emailjs/browser";
 import { ThemeContext } from "/src/main"; // Adjusted import path
 
 function ContactPage() {
-  const { theme } = useContext(ThemeContext); // Access the theme
+    const { theme } = useContext(ThemeContext); // Access the theme
+
+    const [email,setEmail]=useState('')
+    const [subject,setSubject]=useState('')
+    const [message,setMessage]=useState('')
+
+
+    const handleEmailSubmit=(e)=>{
+      e.preventDefault();
+
+      const templateParams={
+        from_email:email,
+        to_name:"Nacto-care",
+        subject:subject,
+        message: message,
+      }
+
+      emailjs.send("service_lktb68z","template_4vxjnl1",templateParams,"o6kveYmOSDrs0l1Mg")
+      .then((response)=>{
+        console.log("email sent",response)
+        alert("Your message has been sent successfully! Will get back to you as soon as possible.")
+        setEmail('')
+        setSubject('')
+        setMessage('')        
+      })
+      .catch((err)=>{
+        console.log("error",err)
+        alert("Sorry, something went wrong while sending your message. Please try again later.");
+      })
+    }
 
   return (
     <>
@@ -13,7 +43,7 @@ function ContactPage() {
         </div>
       </div>
       <div>
-        <form className="bg-white dark:bg-gray-800 contact">
+        <form className="bg-white dark:bg-gray-800 contact" onSubmit={handleEmailSubmit}>
           <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
             <h2 className="mb-4 text-4xl font-extrabold text-center text-green-500">
               Contact Us
@@ -35,6 +65,9 @@ function ContactPage() {
                 <input
                   type="email"
                   id="email"
+                  name='email'
+                  value={email}
+                  onChange={(e)=>setEmail(e.target.value)}
                   className="shadow-sm bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                   placeholder="Email@Email.com"
                   required
@@ -52,6 +85,9 @@ function ContactPage() {
                 <input
                   type="text"
                   id="subject"
+                  name="subject"
+                  value={subject}
+                  onChange={(e)=>setSubject(e.target.value)}
                   className="block p-3 w-full text-sm text-gray-900 dark:text-white bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-300 dark:border-gray-600 shadow-sm focus:ring-primary-500 focus:border-primary-500"
                   placeholder="Let us know how we can help you"
                   required
@@ -69,6 +105,9 @@ function ContactPage() {
                 <textarea
                   id="message"
                   rows="6"
+                  name="message"
+                  value={message}
+                  onChange={(e)=>setMessage(e.target.value)}
                   className="block p-2.5 w-full text-sm text-gray-900 dark:text-white bg-gray-50 dark:bg-gray-700 rounded-lg shadow-sm border border-gray-300 dark:border-gray-600 focus:ring-primary-500 focus:border-primary-500"
                   placeholder="Leave a comment..."
                 ></textarea>
