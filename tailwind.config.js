@@ -15,14 +15,9 @@ export default {
       "2xl": "1536px",
     },
     extend: {
-      utilities: {
-        '.text-black-important': {
-          color: 'black !important',
-        },
+      fontFamily: {
+        body: ["Poppins"],
       },
-    },
-    fontFamily: {
-      body: ["Poppins"],
     },
   },
   plugins: [
